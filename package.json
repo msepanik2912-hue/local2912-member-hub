@@ -1,9 +1,11 @@
 {
   "name": "afscme-local-2912-stage9",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "check:release": "python tools/validate_build.py"

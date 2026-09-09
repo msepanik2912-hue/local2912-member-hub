@@ -51,7 +51,7 @@ function worker() {
   const scope='https://example.github.io/local2912-member-hub/';
   const prefix=`local2912:${scope}:`;
   const context=vm.createContext({URL,Response,self:{registration:{scope},clients:{claim:async()=>{}},addEventListener:(name,fn)=>handlers[name]=fn},
-    caches:{keys:async()=>[prefix+'0.8.0',prefix+'0.9.0','another-site-cache'],delete:async key=>deleted.push(key)}});
+    caches:{keys:async()=>[prefix+'0.8.0',prefix+JSON.parse(read('release.json')).version,'another-site-cache'],delete:async key=>deleted.push(key)}});
   vm.runInContext(read('public/sw.js'),context);
   return {handlers,deleted,prefix};
 }

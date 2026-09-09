@@ -1,9 +1,10 @@
 const PREFIX = `local2912:${self.registration.scope}:`;
-const CACHE = `${PREFIX}0.9.0`;
+const CACHE = `${PREFIX}0.9.1`;
 const CORE = [
   "./",
   "./index.html",
   "./css/styles.css",
+  "./css/refresh.css",
   "./js/config.js",
   "./js/feed-utils.js",
   "./js/app.js",
