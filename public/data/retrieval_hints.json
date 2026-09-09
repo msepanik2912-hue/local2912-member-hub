@@ -1,0 +1,729 @@
+{
+  "version": "1.0",
+  "description": "Deterministic lexical intent boosts used by the Local 2912 Member Hub before any AI explanation layer. Rules only re-rank authoritative source records; they do not generate rights conclusions.",
+  "complex_layout_penalty": 18,
+  "rules": [
+    {
+      "id": "call_in_pay",
+      "record_id": "cba-097",
+      "source": "cba",
+      "boost": 100,
+      "any_phrases": [
+        "called in",
+        "call in",
+        "outside my regular hours",
+        "outside regular hours"
+      ],
+      "any_terms": [
+        "minimum",
+        "pay",
+        "hours"
+      ]
+    },
+    {
+      "id": "reporting_pay",
+      "record_id": "cba-096",
+      "source": "cba",
+      "boost": 90,
+      "any_phrases": [
+        "report to work",
+        "reported to work",
+        "no work for me",
+        "unable to start work"
+      ]
+    },
+    {
+      "id": "mandatory_overtime",
+      "record_id": "cba-095",
+      "source": "cba",
+      "boost": 90,
+      "all_terms": [
+        "overtime"
+      ],
+      "any_terms": [
+        "force",
+        "forced",
+        "mandatory",
+        "volunteer",
+        "volunteers",
+        "offered",
+        "offer"
+      ]
+    },
+    {
+      "id": "overtime_rate",
+      "record_id": "cba-094",
+      "source": "cba",
+      "boost": 65,
+      "all_terms": [
+        "overtime"
+      ],
+      "any_terms": [
+        "rate",
+        "time",
+        "half",
+        "sunday",
+        "hours",
+        "paid",
+        "pay"
+      ]
+    },
+    {
+      "id": "comp_time",
+      "record_id": "cba-099",
+      "source": "cba",
+      "boost": 85,
+      "any_phrases": [
+        "compensatory time",
+        "comp time",
+        "cash out"
+      ],
+      "any_terms": [
+        "payout",
+        "paid"
+      ]
+    },
+    {
+      "id": "flex_time",
+      "record_id": "cba-100",
+      "source": "cba",
+      "boost": 90,
+      "any_phrases": [
+        "flexible schedule",
+        "flexible time",
+        "flex time",
+        "compressed workweek",
+        "compressed work week"
+      ]
+    },
+    {
+      "id": "schedule_change",
+      "record_id": "cba-092",
+      "source": "cba",
+      "boost": 100,
+      "any_phrases": [
+        "change my shift",
+        "changes my shift",
+        "change my schedule",
+        "changes my work schedule",
+        "schedule change",
+        "schedule changes",
+        "fourteen days notice",
+        "14 days notice"
+      ]
+    },
+    {
+      "id": "vacation_amount",
+      "record_id": "cba-037",
+      "source": "cba",
+      "boost": 90,
+      "all_terms": [
+        "vacation"
+      ],
+      "any_phrases": [
+        "how much vacation",
+        "vacation do i get",
+        "first year",
+        "new hire"
+      ],
+      "any_terms": [
+        "years",
+        "service",
+        "amount"
+      ]
+    },
+    {
+      "id": "vacation_carryover",
+      "record_id": "cba-040",
+      "source": "cba",
+      "boost": 100,
+      "all_terms": [
+        "vacation"
+      ],
+      "any_terms": [
+        "carry",
+        "carryover",
+        "unused",
+        "forfeit",
+        "forfeiture"
+      ]
+    },
+    {
+      "id": "vacation_selection",
+      "record_id": "cba-043",
+      "source": "cba",
+      "boost": 95,
+      "all_terms": [
+        "vacation"
+      ],
+      "any_terms": [
+        "preferences",
+        "request",
+        "requests",
+        "november",
+        "cancel",
+        "approved",
+        "selection"
+      ]
+    },
+    {
+      "id": "holiday_pay",
+      "record_id": "cba-034",
+      "source": "cba",
+      "boost": 100,
+      "all_terms": [
+        "holiday"
+      ],
+      "any_terms": [
+        "pay",
+        "paid",
+        "rate",
+        "work"
+      ]
+    },
+    {
+      "id": "holiday_scheduling",
+      "record_id": "cba-033",
+      "source": "cba",
+      "boost": 85,
+      "all_terms": [
+        "holiday"
+      ],
+      "any_phrases": [
+        "day off",
+        "regular day off",
+        "another day off"
+      ]
+    },
+    {
+      "id": "sick_leave",
+      "record_id": "cba-035",
+      "source": "cba",
+      "boost": 75,
+      "any_phrases": [
+        "sick leave"
+      ],
+      "any_terms": [
+        "sick",
+        "illness",
+        "family",
+        "household",
+        "medical"
+      ]
+    },
+    {
+      "id": "discipline_representation",
+      "record_id": "cba-110",
+      "source": "cba",
+      "boost": 125,
+      "any_terms": [
+        "discipline",
+        "disciplined",
+        "disciplinary",
+        "predisciplinary",
+        "interrogation",
+        "investigation",
+        "investigatory",
+        "misconduct",
+        "warning"
+      ],
+      "any_phrases": [
+        "union representative",
+        "have a steward",
+        "right to a union representative",
+        "question me",
+        "written reasons",
+        "oral warning",
+        "progressive discipline",
+        "inspector general"
+      ]
+    },
+    {
+      "id": "discipline_general",
+      "record_id": "cba-110",
+      "source": "cba",
+      "boost": 70,
+      "any_terms": [
+        "discipline",
+        "disciplined",
+        "disciplinary",
+        "predisciplinary",
+        "interrogation",
+        "investigation",
+        "investigatory",
+        "reprimand",
+        "warning"
+      ]
+    },
+    {
+      "id": "grievance_step1",
+      "record_id": "cba-112",
+      "source": "cba",
+      "boost": 110,
+      "all_terms": [
+        "grievance"
+      ],
+      "any_phrases": [
+        "step i",
+        "step 1",
+        "step ii",
+        "step 2",
+        "step iii",
+        "step 3",
+        "file a grievance",
+        "request arbitration after the step iii",
+        "supervisor have to answer"
+      ]
+    },
+    {
+      "id": "grievance_missed_deadline",
+      "record_id": "cba-114",
+      "source": "cba",
+      "boost": 100,
+      "all_terms": [
+        "grievance"
+      ],
+      "any_terms": [
+        "misses",
+        "missed",
+        "deadline",
+        "pending",
+        "order",
+        "group",
+        "employees",
+        "meeting",
+        "meetings",
+        "steward"
+      ]
+    },
+    {
+      "id": "discharge_arbitration",
+      "record_id": "cba-113",
+      "source": "cba",
+      "boost": 130,
+      "any_phrases": [
+        "discharge or suspension over thirty days",
+        "discharge or suspension over 30 days",
+        "arbitration of a discharge",
+        "suspension over thirty days",
+        "suspension over 30 days"
+      ]
+    },
+    {
+      "id": "probation",
+      "record_id": "cba-075",
+      "source": "cba",
+      "boost": 110,
+      "any_terms": [
+        "probation",
+        "probationary"
+      ],
+      "any_phrases": [
+        "six months of probation",
+        "twelve months",
+        "12 months",
+        "new afscme employee"
+      ]
+    },
+    {
+      "id": "seniority_definition",
+      "record_id": "cba-065",
+      "source": "cba",
+      "boost": 95,
+      "all_terms": [
+        "seniority"
+      ],
+      "any_terms": [
+        "mean",
+        "definition",
+        "continuous",
+        "service"
+      ]
+    },
+    {
+      "id": "seniority_reciprocity",
+      "record_id": "cba-066",
+      "source": "cba",
+      "boost": 100,
+      "any_phrases": [
+        "prior service",
+        "public agency",
+        "another public agency",
+        "reciprocity"
+      ]
+    },
+    {
+      "id": "break_in_service",
+      "record_id": "cba-068",
+      "source": "cba",
+      "boost": 125,
+      "any_phrases": [
+        "absent five days",
+        "five days without calling",
+        "lose seniority",
+        "break in service"
+      ]
+    },
+    {
+      "id": "layoff",
+      "record_id": "cba-069",
+      "source": "cba",
+      "boost": 85,
+      "any_terms": [
+        "layoff",
+        "laid",
+        "bump",
+        "bumping",
+        "recall"
+      ]
+    },
+    {
+      "id": "vacancy_bid",
+      "record_id": "cba-071",
+      "source": "cba",
+      "boost": 100,
+      "any_terms": [
+        "bid",
+        "bidding",
+        "bidder",
+        "bidders",
+        "vacancy",
+        "vacancies",
+        "transfer"
+      ],
+      "any_phrases": [
+        "change in shift",
+        "work location"
+      ]
+    },
+    {
+      "id": "detail",
+      "record_id": "cba-072",
+      "source": "cba",
+      "boost": 100,
+      "any_terms": [
+        "detail",
+        "detailed",
+        "detailing"
+      ]
+    },
+    {
+      "id": "higher_rated",
+      "record_id": "cba-073",
+      "source": "cba",
+      "boost": 120,
+      "any_phrases": [
+        "higher-rated job",
+        "higher rated job",
+        "higher pay",
+        "outside the bargaining unit"
+      ]
+    },
+    {
+      "id": "employee_file",
+      "record_id": "cba-081",
+      "source": "cba",
+      "boost": 220,
+      "any_phrases": [
+        "personnel file",
+        "personnel files",
+        "old discipline",
+        "used against me",
+        "disciplinary history",
+        "rebuttal in my personnel file"
+      ],
+      "any_terms": [
+        "inspect",
+        "rebuttal",
+        "eighteen",
+        "18",
+        "used"
+      ]
+    },
+    {
+      "id": "forms",
+      "record_id": "cba-082",
+      "source": "cba",
+      "boost": 105,
+      "any_phrases": [
+        "undated resignation",
+        "blank form",
+        "sign a form",
+        "incomplete form"
+      ]
+    },
+    {
+      "id": "performance_eval",
+      "record_id": "cba-083",
+      "source": "cba",
+      "boost": 110,
+      "any_phrases": [
+        "performance evaluation",
+        "performance evaluations"
+      ],
+      "any_terms": [
+        "respond",
+        "rebuttal"
+      ]
+    },
+    {
+      "id": "bereavement",
+      "record_id": "cba-056",
+      "source": "cba",
+      "boost": 100,
+      "any_terms": [
+        "bereavement",
+        "death"
+      ]
+    },
+    {
+      "id": "medical_leave",
+      "record_id": "cba-059",
+      "source": "cba",
+      "boost": 90,
+      "any_phrases": [
+        "medical leave",
+        "unpaid medical leave",
+        "personal leave",
+        "union leave",
+        "duty disability leave"
+      ]
+    },
+    {
+      "id": "religious_accommodation",
+      "record_id": "cba-060",
+      "source": "cba",
+      "boost": 100,
+      "any_phrases": [
+        "religious holiday",
+        "religious day"
+      ]
+    },
+    {
+      "id": "emergency_accommodation",
+      "record_id": "cba-061",
+      "source": "cba",
+      "boost": 105,
+      "all_terms": [
+        "emergency"
+      ],
+      "any_terms": [
+        "vacation",
+        "compensatory",
+        "advance",
+        "notice"
+      ]
+    },
+    {
+      "id": "reasonable_accommodation",
+      "record_id": "cba-062",
+      "source": "cba",
+      "boost": 110,
+      "any_phrases": [
+        "reasonable accommodation",
+        "request an accommodation"
+      ],
+      "any_terms": [
+        "ada",
+        "accommodation"
+      ]
+    },
+    {
+      "id": "parental_leave",
+      "record_id": "cba-063",
+      "source": "cba",
+      "boost": 100,
+      "any_phrases": [
+        "paid parental leave",
+        "parental leave"
+      ],
+      "any_terms": [
+        "birth",
+        "adoption",
+        "foster"
+      ]
+    },
+    {
+      "id": "safety_committee",
+      "record_id": "cba-021",
+      "source": "cba",
+      "boost": 110,
+      "all_terms": [
+        "safety"
+      ],
+      "any_terms": [
+        "committee",
+        "complaint",
+        "complaints"
+      ]
+    },
+    {
+      "id": "safe_workplace",
+      "record_id": "cba-106",
+      "source": "cba",
+      "boost": 115,
+      "any_phrases": [
+        "safe workplace",
+        "safe working environment",
+        "providing a safe"
+      ]
+    },
+    {
+      "id": "safety_arbitration",
+      "record_id": "cba-107",
+      "source": "cba",
+      "boost": 115,
+      "all_terms": [
+        "safety"
+      ],
+      "any_terms": [
+        "grievance",
+        "arbitration",
+        "arbitrator"
+      ]
+    },
+    {
+      "id": "vdt",
+      "record_id": "cba-108",
+      "source": "cba",
+      "boost": 110,
+      "any_phrases": [
+        "video display terminal",
+        "vdt",
+        "workstation"
+      ],
+      "any_terms": [
+        "glare",
+        "chair",
+        "keyboard"
+      ]
+    },
+    {
+      "id": "mileage",
+      "record_id": "cba-045",
+      "source": "cba",
+      "boost": 100,
+      "any_terms": [
+        "mileage",
+        "car",
+        "vehicle"
+      ],
+      "any_phrases": [
+        "own car",
+        "personal vehicle"
+      ]
+    },
+    {
+      "id": "deferred_comp",
+      "record_id": "cba-046",
+      "source": "cba",
+      "boost": 100,
+      "any_phrases": [
+        "deferred compensation",
+        "457 plan",
+        "401(a)",
+        "city contribute"
+      ]
+    },
+    {
+      "id": "bulletin_email",
+      "record_id": "cba-013",
+      "source": "cba",
+      "boost": 90,
+      "any_phrases": [
+        "bulletin boards",
+        "bulletin board",
+        "union use city",
+        "city email"
+      ]
+    },
+    {
+      "id": "union_orientation",
+      "record_id": "cba-016",
+      "source": "cba",
+      "boost": 100,
+      "any_phrases": [
+        "union orientation",
+        "after i am hired",
+        "new employee orientation"
+      ]
+    },
+    {
+      "id": "contracting_out",
+      "record_id": "cba-117",
+      "source": "cba",
+      "boost": 110,
+      "any_phrases": [
+        "contracts out",
+        "contracting out",
+        "outside contractor",
+        "privatization"
+      ],
+      "any_terms": [
+        "contractor"
+      ]
+    },
+    {
+      "id": "union_activity_discrimination",
+      "record_id": "cba-125",
+      "source": "cba",
+      "boost": 100,
+      "all_terms": [
+        "union"
+      ],
+      "any_terms": [
+        "discrimination",
+        "discriminated",
+        "intimidated",
+        "coerced",
+        "activity"
+      ]
+    },
+    {
+      "id": "dues",
+      "record_id": "cba-129",
+      "source": "cba",
+      "boost": 100,
+      "any_phrases": [
+        "dues deduction",
+        "union dues"
+      ],
+      "any_terms": [
+        "authorize",
+        "authorized",
+        "authorization"
+      ]
+    },
+    {
+      "id": "represented_grievance_governance",
+      "record_id": "cba-112",
+      "source": "cba",
+      "boost": 160,
+      "all_terms": [
+        "grievance"
+      ],
+      "any_phrases": [
+        "personnel rules",
+        "afscme contract",
+        "contract grievance procedure"
+      ]
+    },
+    {
+      "id": "personnel_rule_conflict",
+      "record_id": "pr-002",
+      "source": "personnel",
+      "boost": 190,
+      "all_terms": [
+        "personnel",
+        "rules"
+      ],
+      "any_terms": [
+        "conflict",
+        "controls",
+        "control",
+        "governs",
+        "represented"
+      ]
+    }
+  ]
+}

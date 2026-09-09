@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base target="_top">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local 2912 Document Administration</title>
+  <style>
+    :root{font-family:Arial,sans-serif;color:#1d2529;background:#f4f6f5}body{margin:0}.wrap{max-width:1050px;margin:auto;padding:1rem}.panel{background:white;border:1px solid #c8d0cc;border-radius:.75rem;padding:1rem;margin:1rem 0}h1,h2,h3{line-height:1.2}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem}.stack>*+*{margin-top:.7rem}label{display:block;font-weight:700}input,select,textarea,button{font:inherit}input,select,textarea{width:100%;box-sizing:border-box;padding:.65rem;border:1px solid #73807a;border-radius:.35rem}button{padding:.65rem 1rem;border-radius:.35rem;border:2px solid #006b3c;cursor:pointer}.primary{background:#006b3c;color:white}.secondary{background:white;color:#004d2b}.danger{border-color:#9b1c1c;color:#7b1111;background:white}.status{padding:.75rem;border-left:4px solid #006b3c;background:#eef8f2}.warn{border-left-color:#a66300;background:#fff7e8}.fail{border-left-color:#b42318;background:#fff0ee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #d9dfdc;padding:.55rem}.actions{display:flex;gap:.4rem;flex-wrap:wrap}.chip{display:inline-block;padding:.15rem .45rem;border:1px solid #73807a;border-radius:999px;font-size:.85rem}.help{color:#52615a}.validation-list li{margin:.35rem 0}details{margin:.5rem 0}pre{white-space:pre-wrap;background:#f5f7f6;padding:.7rem;border-radius:.4rem;max-height:18rem;overflow:auto}@media(max-width:650px){table,thead,tbody,tr,th,td{display:block}thead{position:absolute;left:-9999px}tr{border:1px solid #ccd4d0;margin:.75rem 0;padding:.5rem}td{border:0}td::before{content:attr(data-label);font-weight:700;display:block}}
+  </style>
+</head>
+<body>
+<a href="#main" class="sr-only">Skip to main content</a>
+<div id="live-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+<main id="main" class="wrap">
+  <h1>Local 2912 Document Administration</h1>
+  <p>This restricted tool updates the searchable CBA and Personnel Rules without editing Member Hub code. Uploads remain drafts until an administrator validates and activates them.</p>
+
+  <section class="panel" aria-labelledby="upload-title">
+    <h2 id="upload-title">Add a source document</h2>
+    <form id="document-form" class="stack">
+      <div class="grid">
+        <div><label for="document-type">Document type</label><select id="document-type" required><option value="cba">Collective Bargaining Agreement</option><option value="personnel_rules">Personnel Rules</option><option value="supplement">MOU / side letter / amendment / extension</option></select></div>
+        <div><label for="title">Title</label><input id="title" required></div>
+        <div><label for="short-title">Short title</label><input id="short-title" required></div>
+        <div><label for="effective-start">Effective start</label><input id="effective-start" type="date"></div>
+        <div><label for="effective-end">Effective end</label><input id="effective-end" type="date"></div>
+        <div><label for="revision-date">Revision date</label><input id="revision-date" type="date"></div>
+        <div><label for="ratified-effective">Ratified/effective date</label><input id="ratified-effective" type="date"></div>
+      </div>
+      <div id="supplement-fields" hidden>
+        <label for="affects">CBA provisions affected</label>
+        <input id="affects" placeholder="Example: Article 16, Section 16.6; wage schedules">
+        <label for="precedence-note">How this document changes or supplements the CBA</label>
+        <textarea id="precedence-note" rows="3" placeholder="Describe only an express modification or supplement. Do not infer conflicts."></textarea>
+      </div>
+      <div>
+        <label for="pdf-file">PDF source</label>
+        <input id="pdf-file" type="file" accept="application/pdf,.pdf" required aria-describedby="pdf-help">
+        <p id="pdf-help" class="help">Text extraction happens in this browser. Scanned or image-only pages will be flagged for review rather than silently accepted.</p>
+      </div>
+      <label><input id="share-pdf" type="checkbox" checked style="width:auto"> Make the official PDF viewable by members with the link when account policy permits</label>
+      <button id="analyze-button" class="secondary" type="button">Analyze PDF</button>
+      <button id="save-button" class="primary" type="submit" disabled>Save as draft</button>
+    </form>
+    <div id="analysis-status" class="status" role="status" hidden></div>
+    <div id="validation-results" hidden></div>
+  </section>
+
+  <section class="panel" aria-labelledby="registry-title">
+    <div class="actions"><h2 id="registry-title" style="margin-right:auto">Document registry</h2><button id="refresh-button" class="secondary" type="button">Refresh</button><button id="republish-button" class="secondary" type="button">Republish current snapshots</button></div>
+    <div id="registry"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="setup-title">
+    <h2 id="setup-title">Connection information</h2>
+    <p class="help">The public feed is a separate read-only Apps Script deployment. It needs the Published Source Snapshots folder ID shown here.</p>
+    <pre id="setup-info">Loading…</pre>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+'use strict';
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+const $=id=>document.getElementById(id);
+let analyzed=null;
+let fileBytes=null;
+
+function announce(msg){$('live-status').textContent='';setTimeout(()=>{$('live-status').textContent=msg},20)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function normalize(s){return String(s||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim()}
+function lineHeading(s){return String(s||'').replace(/\s+/g,' ').trim()}
+
+$('document-type').addEventListener('change',()=>{$('supplement-fields').hidden=$('document-type').value!=='supplement'; analyzed=null; $('save-button').disabled=true;});
+$('pdf-file').addEventListener('change',()=>{analyzed=null;$('save-button').disabled=true;$('validation-results').hidden=true;});
+
+async function extractPdf(file){
+  const ab=await file.arrayBuffer(); fileBytes=new Uint8Array(ab);
+  const pdf=await pdfjsLib.getDocument({data:ab}).promise;
+  const pages=[];
+  for(let p=1;p<=pdf.numPages;p++){
+    const page=await pdf.getPage(p); const content=await page.getTextContent();
+    const groups=[];
+    content.items.filter(x=>x.str&&x.str.trim()).forEach(item=>{
+      const y=Math.round((item.transform?.[5]||0)*2)/2; const x=item.transform?.[4]||0;
+      let g=groups.find(z=>Math.abs(z.y-y)<=1.5); if(!g){g={y,items:[]};groups.push(g)} g.items.push({x,str:item.str});
+    });
+    groups.sort((a,b)=>b.y-a.y);
+    const lines=groups.map(g=>g.items.sort((a,b)=>a.x-b.x).map(i=>i.str).join(' ').replace(/\s+/g,' ').trim()).filter(Boolean);
+    pages.push({pdf_page:p,lines,text:lines.join('\n')});
+    $('analysis-status').textContent=`Extracting page ${p} of ${pdf.numPages}…`;
+  }
+  return pages;
+}
+
+function makeRecord(id,source,kind,heading,page,extra={}){return Object.assign({id,source,kind,heading,pages:[page],pdf_page_start:page,pdf_page_end:page,text:''},extra)}
+function finalize(current,records){if(!current)return;current.text=(current._lines||[]).join('\n').trim();delete current._lines;records.push(current)}
+
+function parseCba(pages,meta){
+  const records=[],index=[];let current=null,seq=0,article=null,articleTitle='',section=null,sectionTitle='';
+  let bodyStarted=false,tail=false;
+  for(const pg of pages){
+    const pageText=normalize(pg.text);
+    if(!bodyStarted && pageText.includes('this agreement is entered') && pageText.includes('article 1')) bodyStarted=true;
+    if(!bodyStarted) continue;
+    for(const raw of pg.lines){
+      const line=lineHeading(raw); if(!line)continue;
+      if(/^APPENDIX\b|^SCHEDULES?\b|^SIDE\s+LETTERS?\b/i.test(line)) tail=true;
+      if(tail){finalize(current,records);current=null;seq++;records.push(makeRecord(`cba-${seq.toString().padStart(3,'0')}`,'cba','supplement-page',`${line.slice(0,120)} — PDF page ${pg.pdf_page}`,pg.pdf_page,{text:pg.text,complex_layout:true}));break;}
+      const am=line.match(/^ARTICLE\s+(\d+)\s*[-–—]+\s*(.+)$/i);
+      if(am){finalize(current,records);seq++;article=am[1];articleTitle=am[2].trim();section=null;sectionTitle='';current=makeRecord(`cba-${seq.toString().padStart(3,'0')}`,'cba','article',line,pg.pdf_page,{article,article_title:articleTitle,section:null,section_title:null,_lines:[]});index.push({type:'article',article,title:articleTitle,label:`Article ${article} — ${articleTitle}`,record_id:current.id,pdf_page:pg.pdf_page});continue;}
+      const sm=line.match(/^Section\s+[-–— ]*(\d+(?:\.\d+)?(?:\s*[-–—]?\s*(?:[A-Za-z]\d?\)?|\([A-Za-z]\)))?)\s*(?:[-–—:]\s*|\s+)(.*)$/i);
+      if(sm){finalize(current,records);seq++;section=sm[1].replace(/\s+/g,'');sectionTitle=sm[2].trim();current=makeRecord(`cba-${seq.toString().padStart(3,'0')}`,'cba','section',line,pg.pdf_page,{article,article_title:articleTitle,section,section_title:sectionTitle,_lines:[]});index.push({type:'section',article,section,title:sectionTitle,label:line,record_id:current.id,pdf_page:pg.pdf_page});continue;}
+      if(current){if(!current.pages.includes(pg.pdf_page)){current.pages.push(pg.pdf_page);current.pdf_page_end=pg.pdf_page}current._lines.push(raw)}
+    }
+  }
+  finalize(current,records);
+  return {metadata:Object.assign({},meta,{authority:'primary',page_count:pages.length}),index,records};
+}
+
+function parsePersonnel(pages,meta){
+  const records=[],index=[];let current=null,seq=0,rule=null,ruleTitle='',section=null,sectionTitle='',bodyStarted=false;
+  for(const pg of pages){
+    const pageText=normalize(pg.text);
+    if(!bodyStarted && pageText.includes('disclaimer') && pageText.includes('personnel rules')) bodyStarted=true;
+    if(!bodyStarted) continue;
+    if(!pg.text.trim()){seq++;records.push(makeRecord(`pr-${seq.toString().padStart(3,'0')}`,'personnel','image-page',`Image-based source page — PDF page ${pg.pdf_page}`,pg.pdf_page,{rule,rule_title:ruleTitle,section,section_title:sectionTitle,accessibility_note:'Image-only page requires verified accessible text before publication.'}));continue;}
+    for(const raw of pg.lines){
+      const line=lineHeading(raw);if(!line)continue;
+      const rm=line.match(/^RULE\s+([IVXLCDM]+(?:A)?|\d+)\s*[-–—]?\s*(.*)$/i);
+      if(rm){finalize(current,records);seq++;rule=rm[1].toUpperCase();ruleTitle=rm[2].trim();section=null;sectionTitle='';current=makeRecord(`pr-${seq.toString().padStart(3,'0')}`,'personnel','rule',line,pg.pdf_page,{rule,rule_title:ruleTitle,section:null,section_title:null,_lines:[]});index.push({type:'rule',rule,title:ruleTitle,label:line,record_id:current.id,pdf_page:pg.pdf_page});continue;}
+      const sm=line.match(/^Section\s+(\d+[A-Za-z]?)\s*[-–—]?\s*(.*)$/i);
+      if(sm){finalize(current,records);seq++;section=sm[1];sectionTitle=sm[2].trim();current=makeRecord(`pr-${seq.toString().padStart(3,'0')}`,'personnel','section',line,pg.pdf_page,{rule,rule_title:ruleTitle,section,section_title:sectionTitle,_lines:[]});index.push({type:'section',rule,section,title:sectionTitle,label:line,record_id:current.id,pdf_page:pg.pdf_page});continue;}
+      if(!current){seq++;current=makeRecord(`pr-${seq.toString().padStart(3,'0')}`,'personnel','frontmatter',line,pg.pdf_page,{rule:null,rule_title:null,section:null,section_title:null,_lines:[]});}
+      if(!current.pages.includes(pg.pdf_page)){current.pages.push(pg.pdf_page);current.pdf_page_end=pg.pdf_page}current._lines.push(raw);
+    }
+  }
+  finalize(current,records);
+  return {metadata:Object.assign({},meta,{authority:'supplemental',page_count:pages.length}),index,records};
+}
+
+function parseSupplement(pages,meta){
+  const records=pages.map((pg,i)=>makeRecord(`sup-${(i+1).toString().padStart(3,'0')}`,'supplement','page',`${meta.short_title||meta.title} — PDF page ${pg.pdf_page}`,pg.pdf_page,{text:pg.text}));
+  return {metadata:Object.assign({},meta,{authority:'conditional',page_count:pages.length}),index:[],records};
+}
+
+function coverage(records,terms){const text=normalize(records.map(r=>`${r.heading||''} ${r.text||''}`).join(' '));return terms.some(t=>text.includes(normalize(t)))}
+function validateCorpus(type,pages,corpus){
+  const empty=pages.filter(p=>!p.text.trim()).length;const checks=[],errors=[],warnings=[];
+  const add=(name,ok,hard=false)=>{checks.push({name,ok});if(!ok)(hard?errors:warnings).push(name)};
+  add('PDF contains extractable text on most pages',empty/pages.length<.2,true);
+  if(type==='cba'){
+    const articles=corpus.records.filter(r=>r.kind==='article').length;add('Multiple CBA Articles detected',articles>=10,true);
+    add('Discipline language found',coverage(corpus.records,['discipline','disciplinary']),true);
+    add('Grievance/arbitration language found',coverage(corpus.records,['grievance','arbitration']),true);
+    add('Hours/overtime language found',coverage(corpus.records,['overtime','hours of work']),false);
+    add('Vacation language found',coverage(corpus.records,['vacation']),false);
+    add('Probation language found',coverage(corpus.records,['probation']),false);
+    add('Union representation language found',coverage(corpus.records,['union representative','union representation']),false);
+  }else if(type==='personnel_rules'){
+    const rules=corpus.records.filter(r=>r.kind==='rule').length;add('Multiple Personnel Rules detected',rules>=10,true);
+    add('Collective bargaining/CBA hierarchy language found',coverage(corpus.records,['collective bargaining agreement','applicable cba']),true);
+    add('Discipline language found',coverage(corpus.records,['disciplinary','discipline']),false);
+    add('Grievance language found',coverage(corpus.records,['grievance']),false);
+    add('Sick leave language found',coverage(corpus.records,['sick leave']),false);
+    add('Disability/accommodation language found',coverage(corpus.records,['reasonable accommodation','disability']),false);
+  }else{
+    add('Supplement contains extractable text',corpus.records.some(r=>String(r.text||'').trim()),true);
+  }
+  return {status:errors.length?'FAIL':warnings.length?'REVIEW':'PASS',checks,errors,warnings,empty_pages:empty,total_pages:pages.length,record_count:corpus.records.length};
+}
+
+function metadataFromForm(pageCount){return {document_type:$('document-type').value,title:$('title').value.trim(),short_title:$('short-title').value.trim(),effective_start:$('effective-start').value,effective_end:$('effective-end').value,revision_date:$('revision-date').value,ratified_effective:$('ratified-effective').value,affects:$('affects').value.trim(),precedence_note:$('precedence-note').value.trim(),page_count:pageCount}}
+
+async function analyze(){
+  const file=$('pdf-file').files[0];if(!file){announce('Choose a PDF first.');$('pdf-file').focus();return}
+  if(!$('title').value.trim()||!$('short-title').value.trim()){announce('Enter a title and short title before analysis.');return}
+  $('analysis-status').hidden=false;$('analysis-status').className='status';$('analysis-status').textContent='Opening PDF…';$('save-button').disabled=true;
+  try{
+    const pages=await extractPdf(file);const meta=metadataFromForm(pages.length);let corpus;
+    if(meta.document_type==='cba') corpus=parseCba(pages,meta);else if(meta.document_type==='personnel_rules') corpus=parsePersonnel(pages,meta);else corpus=parseSupplement(pages,meta);
+    const validation=validateCorpus(meta.document_type,pages,corpus);analyzed={meta,corpus,validation,fileName:file.name};
+    renderValidation(validation,corpus);$('save-button').disabled=validation.status==='FAIL';
+    $('analysis-status').textContent=`Analysis complete: ${validation.status}. ${corpus.records.length} searchable records detected across ${pages.length} PDF pages.`;
+    $('analysis-status').className='status '+(validation.status==='FAIL'?'fail':validation.status==='REVIEW'?'warn':'');announce(`Document analysis ${validation.status.toLowerCase()}.`);
+  }catch(err){$('analysis-status').textContent=`Analysis failed: ${err.message}`;$('analysis-status').className='status fail';announce('PDF analysis failed.');}
+}
+
+function renderValidation(v,corpus){const target=$('validation-results');target.hidden=false;target.innerHTML=`<h3>Validation</h3><p><span class="chip">${esc(v.status)}</span> ${v.record_count} searchable records; ${v.empty_pages} empty/image-only pages.</p><ul class="validation-list">${v.checks.map(c=>`<li>${c.ok?'✓':'⚠'} ${esc(c.name)}</li>`).join('')}</ul><details><summary>Detected headings</summary><pre>${esc(corpus.records.filter(r=>['article','section','rule'].includes(r.kind)).slice(0,120).map(r=>r.heading).join('\n'))}</pre></details>${v.status==='REVIEW'?'<p class="status warn"><strong>Human review required.</strong> Warnings do not block saving the draft, but an administrator should verify the affected source before activation.</p>':''}`}
+
+function bytesToBase64(bytes){let binary='';const chunk=0x8000;for(let i=0;i<bytes.length;i+=chunk)binary+=String.fromCharCode.apply(null,bytes.subarray(i,Math.min(i+chunk,bytes.length)));return btoa(binary)}
+
+$('analyze-button').addEventListener('click',analyze);
+$('document-form').addEventListener('submit',e=>{e.preventDefault();if(!analyzed||!fileBytes)return;const current=metadataFromForm(analyzed.meta.page_count);analyzed.corpus.metadata=Object.assign({},analyzed.corpus.metadata,current);$('save-button').disabled=true;$('analysis-status').textContent='Saving draft to Google Drive…';google.script.run.withSuccessHandler(result=>{announce('Draft saved.');$('analysis-status').textContent='Draft saved. Review the comparison and activate only after verification.';if(result.shareWarning)$('analysis-status').textContent+=' '+result.shareWarning;renderCompare(result.compare);resetForm();loadState();}).withFailureHandler(err=>{announce('Draft could not be saved.');$('analysis-status').textContent=`Save failed: ${err.message}`;$('analysis-status').className='status fail';$('save-button').disabled=false;}).saveDocument({metadata:current,fileName:analyzed.fileName,pdfBase64:bytesToBase64(fileBytes),corpusJson:JSON.stringify(analyzed.corpus),validation:analyzed.validation,sharePdf:$('share-pdf').checked});});
+
+function resetForm(){analyzed=null;fileBytes=null;$('document-form').reset();$('document-type').value='cba';$('supplement-fields').hidden=true;$('save-button').disabled=true;$('validation-results').hidden=true;}
+function renderCompare(c){if(!c)return;const target=$('validation-results');target.hidden=false;target.insertAdjacentHTML('beforeend',`<h3>Comparison with active version</h3><p>${esc(c.message||'')}</p>${c.added?.length?`<details><summary>New headings</summary><pre>${esc(c.added.join('\n'))}</pre></details>`:''}${c.removed?.length?`<details><summary>Removed headings</summary><pre>${esc(c.removed.join('\n'))}</pre></details>`:''}`)}
+
+function loadState(){google.script.run.withSuccessHandler(state=>{renderRegistry(state.documents||[]);$('setup-info').textContent=JSON.stringify(state.setup,null,2)}).withFailureHandler(err=>{$('registry').textContent=`Could not load registry: ${err.message}`}).getAdminState()}
+function renderRegistry(rows){const target=$('registry');if(!rows.length){target.innerHTML='<p>No documents registered yet. Upload the current CBA and Personnel Rules first when you are ready to move off the bundled fallback.</p>';return}target.innerHTML=`<table><thead><tr><th>Source</th><th>Version</th><th>Status</th><th>Validation</th><th>Actions</th></tr></thead><tbody>${rows.map(r=>`<tr><td data-label="Source"><strong>${esc(r.short_title||r.title)}</strong><br><small>${esc(r.document_type)}</small></td><td data-label="Version">${esc(r.effective_start||r.revision_date||'')}${r.effective_end?` – ${esc(r.effective_end)}`:''}</td><td data-label="Status"><span class="chip">${esc(r.status)}</span></td><td data-label="Validation">${esc(r.validation_status||'')}</td><td data-label="Actions"><div class="actions">${r.status!=='ACTIVE'&&r.validation_status!=='FAIL'?`<button class="primary" data-action="activate" data-id="${esc(r.document_id)}">${r.status==='ARCHIVED'?'Roll back / activate':'Activate'}</button>`:''}<button class="secondary" data-action="compare" data-id="${esc(r.document_id)}">Compare</button>${r.status==='ACTIVE'?`<button class="danger" data-action="archive" data-id="${esc(r.document_id)}">Archive</button>`:''}<a href="${esc(r.pdf||'#')}" target="_blank" rel="noopener">PDF</a></div></td></tr>`).join('')}</tbody></table>`;target.querySelectorAll('button[data-action]').forEach(b=>b.addEventListener('click',()=>runAction(b.dataset.action,b.dataset.id)))}
+function runAction(action,id){
+  if(action==='compare'){google.script.run.withSuccessHandler(c=>{renderCompare(c);$('validation-results').scrollIntoView()}).withFailureHandler(e=>announce(e.message)).compareDocument(id);return}
+  if(!confirm(action==='archive'?'Archive this source?':'Activate this source? Current versions of the same full-document type will be archived.'))return;
+  const ok=state=>{announce('Document registry updated.');renderRegistry(state.documents||[])};
+  const fail=e=>{alert(e.message);announce('Document action failed.')};
+  if(action==='archive') google.script.run.withSuccessHandler(ok).withFailureHandler(fail).archiveDocument(id);
+  else google.script.run.withSuccessHandler(ok).withFailureHandler(fail).activateDocument(id);
+}
+$('refresh-button').addEventListener('click',loadState);$('republish-button').addEventListener('click',()=>google.script.run.withSuccessHandler(state=>{announce('Published snapshots rebuilt.');renderRegistry(state.documents||[])}).withFailureHandler(e=>alert(e.message)).republishSnapshots());
+loadState();
+</script>
+</body>
+</html>

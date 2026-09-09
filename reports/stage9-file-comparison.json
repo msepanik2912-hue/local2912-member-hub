@@ -1,0 +1,277 @@
+[
+  {
+    "stage8": "ACCESSIBILITY.md",
+    "stage9": "ACCESSIBILITY.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "css/styles.css",
+    "stage9": "public/css/styles.css",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/announcements.json",
+    "stage9": "public/data/announcements.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/board.json",
+    "stage9": "public/data/board.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/cba_corpus.json",
+    "stage9": "public/data/cba_corpus.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/events.json",
+    "stage9": "public/data/events.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/personnel_corpus.json",
+    "stage9": "public/data/personnel_corpus.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/resources.json",
+    "stage9": "public/data/resources.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/retrieval_hints.json",
+    "stage9": "public/data/retrieval_hints.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/source_archive.json",
+    "stage9": "public/data/source_archive.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/source_manifest.json",
+    "stage9": "public/data/source_manifest.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/stewards.json",
+    "stage9": "public/data/stewards.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "data/supplements_corpus.json",
+    "stage9": "public/data/supplements_corpus.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "docs/afscme-city-chicago-cba-2022-2027.pdf",
+    "stage9": "public/docs/afscme-city-chicago-cba-2022-2027.pdf",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "docs/city-chicago-personnel-rules-2025-08-01.pdf",
+    "stage9": "public/docs/city-chicago-personnel-rules-2025-08-01.pdf",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "google_admin_backend/Code.gs",
+    "stage9": "google_admin_backend/Code.gs",
+    "status": "changed"
+  },
+  {
+    "stage8": "google_admin_backend/GOOGLE_ADMIN_SETUP.md",
+    "stage9": "google_admin_backend/GOOGLE_ADMIN_SETUP.md",
+    "status": "changed"
+  },
+  {
+    "stage8": "google_document_admin/ADMIN_SETUP.md",
+    "stage9": "google_document_admin/ADMIN_SETUP.md",
+    "status": "changed"
+  },
+  {
+    "stage8": "google_document_admin/Code.gs",
+    "stage9": "google_document_admin/Code.gs",
+    "status": "changed"
+  },
+  {
+    "stage8": "google_document_admin/DocumentAdmin.html",
+    "stage9": "google_document_admin/DocumentAdmin.html",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "google_document_public_feed/Code.gs",
+    "stage9": "google_document_public_feed/Code.gs",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "google_document_public_feed/PUBLIC_FEED_SETUP.md",
+    "stage9": "google_document_public_feed/PUBLIC_FEED_SETUP.md",
+    "status": "changed"
+  },
+  {
+    "stage8": "icons/icon-192.png",
+    "stage9": "public/icons/icon-192.png",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "icons/icon-512.png",
+    "stage9": "public/icons/icon-512.png",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "index.html",
+    "stage9": "public/index.html",
+    "status": "changed"
+  },
+  {
+    "stage8": "js/app.js",
+    "stage9": "public/js/app.js",
+    "status": "changed"
+  },
+  {
+    "stage8": "js/config.js",
+    "stage9": "public/js/config.js",
+    "status": "changed"
+  },
+  {
+    "stage8": "manifest.webmanifest",
+    "stage9": "public/manifest.webmanifest",
+    "status": "changed"
+  },
+  {
+    "stage8": "README.md",
+    "stage9": "README.md",
+    "status": "changed"
+  },
+  {
+    "stage8": "reports/baseline_retrieval.json",
+    "stage9": "reports/baseline_retrieval.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/baseline_retrieval.md",
+    "stage9": "reports/baseline_retrieval.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/stage4_baseline_retrieval.json",
+    "stage9": "reports/stage4_baseline_retrieval.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/stage4_baseline_retrieval.md",
+    "stage9": "reports/stage4_baseline_retrieval.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/stage5_tuned2_retrieval.json",
+    "stage9": "reports/stage5_tuned2_retrieval.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/stage5_tuned2_retrieval.md",
+    "stage9": "reports/stage5_tuned2_retrieval.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/stage5_tuned_retrieval.json",
+    "stage9": "reports/stage5_tuned_retrieval.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/stage5_tuned_retrieval.md",
+    "stage9": "reports/stage5_tuned_retrieval.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/tuned_retrieval.json",
+    "stage9": "reports/tuned_retrieval.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "reports/tuned_retrieval.md",
+    "stage9": "reports/tuned_retrieval.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "SOURCE_GOVERNANCE.md",
+    "stage9": "SOURCE_GOVERNANCE.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE4_INTEGRATION.md",
+    "stage9": "STAGE4_INTEGRATION.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE5_PLAN.md",
+    "stage9": "STAGE5_PLAN.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE5_VALIDATION.md",
+    "stage9": "STAGE5_VALIDATION.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE6_IMPLEMENTATION.md",
+    "stage9": "STAGE6_IMPLEMENTATION.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE6_PLAN.md",
+    "stage9": "STAGE6_PLAN.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE7_IMPLEMENTATION.md",
+    "stage9": "STAGE7_IMPLEMENTATION.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE7_PLAN.md",
+    "stage9": "STAGE7_PLAN.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE8_IMPLEMENTATION.md",
+    "stage9": "STAGE8_IMPLEMENTATION.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE8_PLAN.md",
+    "stage9": "STAGE8_PLAN.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "STAGE9_PLAN.md",
+    "stage9": "STAGE9_PLAN.md",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "sw.js",
+    "stage9": "public/sw.js",
+    "status": "changed"
+  },
+  {
+    "stage8": "tests/member_questions.json",
+    "stage9": "tests/member_questions.json",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "tools/build_corpus.py",
+    "stage9": "tools/build_corpus.py",
+    "status": "unchanged"
+  },
+  {
+    "stage8": "tools/evaluate_retrieval.py",
+    "stage9": "tools/evaluate_retrieval.py",
+    "status": "changed"
+  },
+  {
+    "stage8": "tools/validate_build.py",
+    "stage9": "tools/validate_build.py",
+    "status": "changed"
+  }
+]

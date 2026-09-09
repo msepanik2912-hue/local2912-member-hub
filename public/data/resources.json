@@ -1,0 +1,28 @@
+[
+  {
+    "group": "Know your union",
+    "items": [
+      {"label": "Search the AFSCME–City of Chicago CBA", "href": "#contract"},
+      {"label": "Official CBA PDF", "href": "docs/afscme-city-chicago-cba-2022-2027.pdf"},
+      {"label": "City of Chicago Personnel Rules", "href": "docs/city-chicago-personnel-rules-2025-08-01.pdf"},
+      {"label": "Local 2912 Constitution"},
+      {"label": "Meet Your Board", "href": "#board"}
+    ]
+  },
+  {
+    "group": "Know your rights",
+    "items": [
+      {"label": "Weingarten Rights", "href": "#weingarten"},
+      {"label": "Workplace Problem Guide", "href": "#workplace"},
+      {"label": "Respect 2912"}
+    ]
+  },
+  {
+    "group": "Get involved",
+    "items": [
+      {"label": "Membership Action Team"},
+      {"label": "Union Calendar", "href": "#calendar"},
+      {"label": "Training and Events"}
+    ]
+  }
+]

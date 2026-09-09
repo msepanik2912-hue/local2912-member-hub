@@ -1,0 +1,3281 @@
+{
+  "label": "stage9",
+  "summary": {
+    "questions": 78,
+    "top1": 78,
+    "top1_pct": 100.0,
+    "top3": 78,
+    "top3_pct": 100.0,
+    "top5": 78,
+    "top5_pct": 100.0,
+    "topics": {
+      "work_hours": {
+        "n": 10,
+        "top1": 10,
+        "top3": 10,
+        "misses": []
+      },
+      "vacation_leave": {
+        "n": 10,
+        "top1": 10,
+        "top3": 10,
+        "misses": []
+      },
+      "discipline": {
+        "n": 8,
+        "top1": 8,
+        "top3": 8,
+        "misses": []
+      },
+      "grievance": {
+        "n": 10,
+        "top1": 10,
+        "top3": 10,
+        "misses": []
+      },
+      "probation": {
+        "n": 4,
+        "top1": 4,
+        "top3": 4,
+        "misses": []
+      },
+      "seniority_jobs": {
+        "n": 11,
+        "top1": 11,
+        "top3": 11,
+        "misses": []
+      },
+      "records": {
+        "n": 5,
+        "top1": 5,
+        "top3": 5,
+        "misses": []
+      },
+      "leaves_accommodation": {
+        "n": 6,
+        "top1": 6,
+        "top3": 6,
+        "misses": []
+      },
+      "health_safety": {
+        "n": 4,
+        "top1": 4,
+        "top3": 4,
+        "misses": []
+      },
+      "other": {
+        "n": 7,
+        "top1": 7,
+        "top3": 7,
+        "misses": []
+      },
+      "source_governance": {
+        "n": 3,
+        "top1": 3,
+        "top3": 3,
+        "misses": []
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "topic": "work_hours",
+      "question": "When do I get time and a half for overtime?",
+      "expected": [
+        "cba-094"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-094",
+          "source": "cba",
+          "heading": "Section 16.6 - Overtime",
+          "score": 135
+        },
+        {
+          "id": "cba-095",
+          "source": "cba",
+          "heading": "Section 16.7 - Overtime Procedure",
+          "score": 64
+        },
+        {
+          "id": "cba-099",
+          "source": "cba",
+          "heading": "Section 16.11- Use of Compensatory Time",
+          "score": 61
+        },
+        {
+          "id": "cba-097",
+          "source": "cba",
+          "heading": "Section 16.9 \u2014 Call In Pa",
+          "score": 59
+        },
+        {
+          "id": "cba-090",
+          "source": "cba",
+          "heading": "Section 16.2 - Workda",
+          "score": 58
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "topic": "work_hours",
+      "question": "If I work on Sunday and Sunday is not part of my regular workweek, what rate do I get?",
+      "expected": [
+        "cba-094"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-094",
+          "source": "cba",
+          "heading": "Section 16.6 - Overtime",
+          "score": 77
+        },
+        {
+          "id": "cba-073",
+          "source": "cba",
+          "heading": "Section 12.9 - Acting In A Higher-Rated Job",
+          "score": 70
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 63
+        },
+        {
+          "id": "cba-074",
+          "source": "cba",
+          "heading": "Section 12.7 of this Agreement. If no such vacancy exists within the Department, the employee",
+          "score": 61
+        },
+        {
+          "id": "cba-004",
+          "source": "cba",
+          "heading": "Section 1.2 - Unit Work",
+          "score": 60
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "topic": "work_hours",
+      "question": "How is overtime supposed to be offered?",
+      "expected": [
+        "cba-095"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-095",
+          "source": "cba",
+          "heading": "Section 16.7 - Overtime Procedure",
+          "score": 137
+        },
+        {
+          "id": "cba-094",
+          "source": "cba",
+          "heading": "Section 16.6 - Overtime",
+          "score": 42
+        },
+        {
+          "id": "cba-097",
+          "source": "cba",
+          "heading": "Section 16.9 \u2014 Call In Pa",
+          "score": 39
+        },
+        {
+          "id": "cba-099",
+          "source": "cba",
+          "heading": "Section 16.11- Use of Compensatory Time",
+          "score": 39
+        },
+        {
+          "id": "cba-088",
+          "source": "cba",
+          "heading": "ARTICLE 16 - HOUR\u2014 OF WORK AND OVERTIME",
+          "score": 34
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "topic": "work_hours",
+      "question": "Can management force me to work overtime if nobody volunteers?",
+      "expected": [
+        "cba-095"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-095",
+          "source": "cba",
+          "heading": "Section 16.7 - Overtime Procedure",
+          "score": 154
+        },
+        {
+          "id": "cba-070",
+          "source": "cba",
+          "heading": "Section 12.6 \u2014 Balancing the Workforce",
+          "score": 70
+        },
+        {
+          "id": "cba-094",
+          "source": "cba",
+          "heading": "Section 16.6 - Overtime",
+          "score": 64
+        },
+        {
+          "id": "cba-097",
+          "source": "cba",
+          "heading": "Section 16.9 \u2014 Call In Pa",
+          "score": 59
+        },
+        {
+          "id": "cba-099",
+          "source": "cba",
+          "heading": "Section 16.11- Use of Compensatory Time",
+          "score": 58
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "topic": "work_hours",
+      "question": "If I am called in outside my regular hours, what is the minimum pay?",
+      "expected": [
+        "cba-097"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-097",
+          "source": "cba",
+          "heading": "Section 16.9 \u2014 Call In Pa",
+          "score": 147
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 55
+        },
+        {
+          "id": "cba-094",
+          "source": "cba",
+          "heading": "Section 16.6 - Overtime",
+          "score": 55
+        },
+        {
+          "id": "cba-028",
+          "source": "cba",
+          "heading": "Section 5.3--Payment of Wages",
+          "score": 47
+        },
+        {
+          "id": "cba-051",
+          "source": "cba",
+          "heading": "Section 10.4 \u2014 Family Coverage",
+          "score": 47
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "topic": "work_hours",
+      "question": "If I report to work and there is no work for me, do I still get paid?",
+      "expected": [
+        "cba-096"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-096",
+          "source": "cba",
+          "heading": "Section 16.8 - Reporting Pay",
+          "score": 159
+        },
+        {
+          "id": "cba-099",
+          "source": "cba",
+          "heading": "Section 16.11- Use of Compensatory Time",
+          "score": 134
+        },
+        {
+          "id": "cba-004",
+          "source": "cba",
+          "heading": "Section 1.2 - Unit Work",
+          "score": 60
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 58
+        },
+        {
+          "id": "cba-093",
+          "source": "cba",
+          "heading": "Section 16.5 - No Guarantee or Limitation",
+          "score": 58
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "topic": "work_hours",
+      "question": "Can I cash out my compensatory time?",
+      "expected": [
+        "cba-099"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-099",
+          "source": "cba",
+          "heading": "Section 16.11- Use of Compensatory Time",
+          "score": 176
+        },
+        {
+          "id": "cba-094",
+          "source": "cba",
+          "heading": "Section 16.6 - Overtime",
+          "score": 54
+        },
+        {
+          "id": "cba-017",
+          "source": "cba",
+          "heading": "Section 3.7 - Time Off For Union Activities",
+          "score": 50
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 49
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 49
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "topic": "work_hours",
+      "question": "Can I request a flexible schedule or compressed workweek?",
+      "expected": [
+        "cba-100"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-100",
+          "source": "cba",
+          "heading": "Section 16.12 - Flexible Time",
+          "score": 146
+        },
+        {
+          "id": "cba-092",
+          "source": "cba",
+          "heading": "Section 16.4 - Changes in Schedules",
+          "score": 47
+        },
+        {
+          "id": "cba-027",
+          "source": "cba",
+          "heading": "Section 5.2 \u2014 Schedules",
+          "score": 42
+        },
+        {
+          "id": "cba-091",
+          "source": "cba",
+          "heading": "Section 16.3 - Current Schedules",
+          "score": 42
+        },
+        {
+          "id": "cba-020",
+          "source": "cba",
+          "heading": "Section 4.1 - Labor/Management",
+          "score": 36
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "topic": "work_hours",
+      "question": "How much notice do I get before management changes my work schedule?",
+      "expected": [
+        "cba-092"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-092",
+          "source": "cba",
+          "heading": "Section 16.4 - Changes in Schedules",
+          "score": 183
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 65
+        },
+        {
+          "id": "cba-020",
+          "source": "cba",
+          "heading": "Section 4.1 - Labor/Management",
+          "score": 64
+        },
+        {
+          "id": "cba-091",
+          "source": "cba",
+          "heading": "Section 16.3 - Current Schedules",
+          "score": 63
+        },
+        {
+          "id": "cba-070",
+          "source": "cba",
+          "heading": "Section 12.6 \u2014 Balancing the Workforce",
+          "score": 56
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "topic": "work_hours",
+      "question": "Can they change my shift with less than fourteen days notice?",
+      "expected": [
+        "cba-092"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-092",
+          "source": "cba",
+          "heading": "Section 16.4 - Changes in Schedules",
+          "score": 185
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 95
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 77
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 67
+        },
+        {
+          "id": "cba-070",
+          "source": "cba",
+          "heading": "Section 12.6 \u2014 Balancing the Workforce",
+          "score": 61
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "topic": "vacation_leave",
+      "question": "How much vacation do I get after fifteen years of City service?",
+      "expected": [
+        "cba-037"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-037",
+          "source": "cba",
+          "heading": "Section 7.1 \u2014 Amount",
+          "score": 159
+        },
+        {
+          "id": "cba-044",
+          "source": "cba",
+          "heading": "Section 7.7 \u2014 Recigrocity with Other Agencies",
+          "score": 81
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 72
+        },
+        {
+          "id": "cba-066",
+          "source": "cba",
+          "heading": "Section 12.2 \u2014 Reciprocity",
+          "score": 66
+        },
+        {
+          "id": "cba-040",
+          "source": "cba",
+          "heading": "Section 7.3 \u2014 Forfeiture of Vacation",
+          "score": 62
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "topic": "vacation_leave",
+      "question": "I am a new hire. Can I use any vacation during my first year?",
+      "expected": [
+        "cba-037"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-037",
+          "source": "cba",
+          "heading": "Section 7.1 \u2014 Amount",
+          "score": 196
+        },
+        {
+          "id": "cba-040",
+          "source": "cba",
+          "heading": "Section 7.3 \u2014 Forfeiture of Vacation",
+          "score": 77
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 76
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 73
+        },
+        {
+          "id": "cba-043",
+          "source": "cba",
+          "heading": "Section 7.6 \u2014 Selection",
+          "score": 72
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "topic": "vacation_leave",
+      "question": "Can I carry unused vacation into next year?",
+      "expected": [
+        "cba-040"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-040",
+          "source": "cba",
+          "heading": "Section 7.3 \u2014 Forfeiture of Vacation",
+          "score": 187
+        },
+        {
+          "id": "cba-037",
+          "source": "cba",
+          "heading": "Section 7.1 \u2014 Amount",
+          "score": 50
+        },
+        {
+          "id": "cba-039",
+          "source": "cba",
+          "heading": "Section 7.2 \u2014 Pro Rata Vacations",
+          "score": 50
+        },
+        {
+          "id": "cba-043",
+          "source": "cba",
+          "heading": "Section 7.6 \u2014 Selection",
+          "score": 48
+        },
+        {
+          "id": "cba-044",
+          "source": "cba",
+          "heading": "Section 7.7 \u2014 Recigrocity with Other Agencies",
+          "score": 46
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "topic": "vacation_leave",
+      "question": "When do I submit my vacation preferences for next year?",
+      "expected": [
+        "cba-043"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-043",
+          "source": "cba",
+          "heading": "Section 7.6 \u2014 Selection",
+          "score": 153
+        },
+        {
+          "id": "cba-040",
+          "source": "cba",
+          "heading": "Section 7.3 \u2014 Forfeiture of Vacation",
+          "score": 55
+        },
+        {
+          "id": "cba-037",
+          "source": "cba",
+          "heading": "Section 7.1 \u2014 Amount",
+          "score": 50
+        },
+        {
+          "id": "cba-039",
+          "source": "cba",
+          "heading": "Section 7.2 \u2014 Pro Rata Vacations",
+          "score": 50
+        },
+        {
+          "id": "cba-044",
+          "source": "cba",
+          "heading": "Section 7.7 \u2014 Recigrocity with Other Agencies",
+          "score": 46
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "topic": "vacation_leave",
+      "question": "Can management cancel an approved vacation because of an emergency?",
+      "expected": [
+        "cba-043"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-043",
+          "source": "cba",
+          "heading": "Section 7.6 \u2014 Selection",
+          "score": 154
+        },
+        {
+          "id": "cba-061",
+          "source": "cba",
+          "heading": "Section 11.6 \u2014 Emergency Accommodation",
+          "score": 151
+        },
+        {
+          "id": "cba-020",
+          "source": "cba",
+          "heading": "Section 4.1 - Labor/Management",
+          "score": 42
+        },
+        {
+          "id": "cba-037",
+          "source": "cba",
+          "heading": "Section 7.1 \u2014 Amount",
+          "score": 42
+        },
+        {
+          "id": "cba-039",
+          "source": "cba",
+          "heading": "Section 7.2 \u2014 Pro Rata Vacations",
+          "score": 42
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "topic": "vacation_leave",
+      "question": "What do I get paid if I work on a contract holiday?",
+      "expected": [
+        "cba-034"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-034",
+          "source": "cba",
+          "heading": "Section 6.4 \u2014 Holiday Pa",
+          "score": 154
+        },
+        {
+          "id": "cba-099",
+          "source": "cba",
+          "heading": "Section 16.11- Use of Compensatory Time",
+          "score": 126
+        },
+        {
+          "id": "cba-031",
+          "source": "cba",
+          "heading": "Section 6.1 \u2014 Current Holidays",
+          "score": 55
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 55
+        },
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 54
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "topic": "vacation_leave",
+      "question": "If a holiday falls on my regular day off, do I get another day off?",
+      "expected": [
+        "cba-033"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-033",
+          "source": "cba",
+          "heading": "Section 6.3 \u2014 Holiday Scheduling",
+          "score": 176
+        },
+        {
+          "id": "cba-032",
+          "source": "cba",
+          "heading": "Section 6.2 \u2014 Holiday Observance",
+          "score": 70
+        },
+        {
+          "id": "cba-031",
+          "source": "cba",
+          "heading": "Section 6.1 \u2014 Current Holidays",
+          "score": 69
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 68
+        },
+        {
+          "id": "cba-034",
+          "source": "cba",
+          "heading": "Section 6.4 \u2014 Holiday Pa",
+          "score": 62
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "topic": "vacation_leave",
+      "question": "How much sick leave do I earn?",
+      "expected": [
+        "cba-035"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 144
+        },
+        {
+          "id": "cba-034",
+          "source": "cba",
+          "heading": "Section 6.4 \u2014 Holiday Pa",
+          "score": 53
+        },
+        {
+          "id": "cba-030",
+          "source": "cba",
+          "heading": "ARTICLE 6 - HOLIDAYS AND SICK LEAVE",
+          "score": 48
+        },
+        {
+          "id": "cba-031",
+          "source": "cba",
+          "heading": "Section 6.1 \u2014 Current Holidays",
+          "score": 48
+        },
+        {
+          "id": "cba-032",
+          "source": "cba",
+          "heading": "Section 6.2 \u2014 Holiday Observance",
+          "score": 48
+        }
+      ]
+    },
+    {
+      "id": "Q019",
+      "topic": "vacation_leave",
+      "question": "Can I use sick leave to care for a family or household member?",
+      "expected": [
+        "cba-035"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 167
+        },
+        {
+          "id": "cba-059",
+          "source": "cba",
+          "heading": "Section 11.4 \u2014 Unaaid Leaves",
+          "score": 72
+        },
+        {
+          "id": "pr-140",
+          "source": "personnel",
+          "heading": "Section 1 - Legitimate Use of Sick Leave",
+          "score": 72
+        },
+        {
+          "id": "pr-141",
+          "source": "personnel",
+          "heading": "Section 2 - Family Illness",
+          "score": 71
+        },
+        {
+          "id": "pr-146",
+          "source": "personnel",
+          "heading": "Section 7 - Procedures",
+          "score": 67
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "topic": "vacation_leave",
+      "question": "Can I use sick leave in less than half-day increments?",
+      "expected": [
+        "cba-035"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 154
+        },
+        {
+          "id": "cba-059",
+          "source": "cba",
+          "heading": "Section 11.4 \u2014 Unaaid Leaves",
+          "score": 66
+        },
+        {
+          "id": "pr-146",
+          "source": "personnel",
+          "heading": "Section 7 - Procedures",
+          "score": 65
+        },
+        {
+          "id": "pr-140",
+          "source": "personnel",
+          "heading": "Section 1 - Legitimate Use of Sick Leave",
+          "score": 60
+        },
+        {
+          "id": "pr-144",
+          "source": "personnel",
+          "heading": "Section 5 - Patterns of Abuse",
+          "score": 60
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "topic": "discipline",
+      "question": "My supervisor wants to question me about something that could lead to discipline. Can I have a steward?",
+      "expected": [
+        "cba-110"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 159
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 48
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 38
+        },
+        {
+          "id": "cba-016",
+          "source": "cba",
+          "heading": "Section 3.6 - Pay for Meetings",
+          "score": 31
+        },
+        {
+          "id": "cba-145",
+          "source": "cba",
+          "heading": "Appendix A",
+          "score": 30
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "topic": "discipline",
+      "question": "Do I have a right to a union representative at a predisciplinary meeting?",
+      "expected": [
+        "cba-110"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 274
+        },
+        {
+          "id": "cba-018",
+          "source": "cba",
+          "heading": "Section 3.8\u2014Union Meetings",
+          "score": 87
+        },
+        {
+          "id": "cba-016",
+          "source": "cba",
+          "heading": "Section 3.6 - Pay for Meetings",
+          "score": 84
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 77
+        },
+        {
+          "id": "cba-017",
+          "source": "cba",
+          "heading": "Section 3.7 - Time Off For Union Activities",
+          "score": 70
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "topic": "discipline",
+      "question": "Can I ask for a union representative during an interrogation about alleged misconduct?",
+      "expected": [
+        "cba-110"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 252
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 55
+        },
+        {
+          "id": "cba-016",
+          "source": "cba",
+          "heading": "Section 3.6 - Pay for Meetings",
+          "score": 49
+        },
+        {
+          "id": "cba-017",
+          "source": "cba",
+          "heading": "Section 3.7 - Time Off For Union Activities",
+          "score": 49
+        },
+        {
+          "id": "cba-086",
+          "source": "cba",
+          "heading": "Section 15.1 - Personnel Transactions",
+          "score": 48
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "topic": "discipline",
+      "question": "What rights do I have if the Inspector General interviews me in a disciplinary investigation?",
+      "expected": [
+        "cba-110"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 265
+        },
+        {
+          "id": "cba-007",
+          "source": "cba",
+          "heading": "Section 2.1 - Management Rights",
+          "score": 40
+        },
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 40
+        },
+        {
+          "id": "cba-013",
+          "source": "cba",
+          "heading": "Section 3.3 - Bulletin Boards",
+          "score": 39
+        },
+        {
+          "id": "cba-142",
+          "source": "cba",
+          "heading": "Section 27.3 - Disciplinary Action",
+          "score": 39
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "topic": "discipline",
+      "question": "Can the City use evidence obtained in violation of my disciplinary investigation rights?",
+      "expected": [
+        "cba-110"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 301
+        },
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 63
+        },
+        {
+          "id": "pr-115",
+          "source": "personnel",
+          "heading": "Section 1 - Causes for Disciplinary Action",
+          "score": 56
+        },
+        {
+          "id": "pr-116",
+          "source": "personnel",
+          "heading": "Section 1, #42, (a), (b), (c), and (d).",
+          "score": 50
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 47
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "topic": "discipline",
+      "question": "What is the process for an oral warning?",
+      "expected": [
+        "cba-110"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 273
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 31
+        },
+        {
+          "id": "cba-007",
+          "source": "cba",
+          "heading": "Section 2.1 - Management Rights",
+          "score": 30
+        },
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 30
+        },
+        {
+          "id": "cba-140",
+          "source": "cba",
+          "heading": "Section 27.1 - Policv Statement",
+          "score": 30
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "topic": "discipline",
+      "question": "Does the contract require progressive discipline?",
+      "expected": [
+        "cba-110"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 267
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 50
+        },
+        {
+          "id": "pr-117",
+          "source": "personnel",
+          "heading": "Section 2 - Progressive Discipline",
+          "score": 43
+        },
+        {
+          "id": "cba-101",
+          "source": "cba",
+          "heading": "ARTICLE 17 - REQUIRED UNIFORMS",
+          "score": 39
+        },
+        {
+          "id": "cba-007",
+          "source": "cba",
+          "heading": "Section 2.1 - Management Rights",
+          "score": 36
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "topic": "discipline",
+      "question": "If I am disciplined, do they have to give me written reasons?",
+      "expected": [
+        "cba-110"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 243
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 55
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 53
+        },
+        {
+          "id": "cba-142",
+          "source": "cba",
+          "heading": "Section 27.3 - Disciplinary Action",
+          "score": 49
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 46
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "topic": "grievance",
+      "question": "How long do I have to file a Step I grievance?",
+      "expected": [
+        "cba-112"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 187
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 57
+        },
+        {
+          "id": "pr-103",
+          "source": "personnel",
+          "heading": "Section 11 - General Provisions",
+          "score": 53
+        },
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 52
+        },
+        {
+          "id": "cba-111",
+          "source": "cba",
+          "heading": "ARTICLE 21-GRIEVANCES AND ARBITRATION",
+          "score": 47
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "topic": "grievance",
+      "question": "How long does my supervisor have to answer a Step I grievance?",
+      "expected": [
+        "cba-112"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 196
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 63
+        },
+        {
+          "id": "pr-099",
+          "source": "personnel",
+          "heading": "Section 7 - Step One: Filing a Grievance",
+          "score": 49
+        },
+        {
+          "id": "cba-111",
+          "source": "cba",
+          "heading": "ARTICLE 21-GRIEVANCES AND ARBITRATION",
+          "score": 47
+        },
+        {
+          "id": "cba-113",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014b) Procedures for Arbitrations of Suspensions of Over Thirty (30) Days and",
+          "score": 46
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "topic": "grievance",
+      "question": "How long do I have to appeal to Step II?",
+      "expected": [
+        "cba-112"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 65
+        },
+        {
+          "id": "cba-027",
+          "source": "cba",
+          "heading": "Section 5.2 \u2014 Schedules",
+          "score": 36
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 36
+        },
+        {
+          "id": "cba-219",
+          "source": "cba",
+          "heading": "Side letters \u2014 PDF page 202",
+          "score": 36
+        },
+        {
+          "id": "cba-232",
+          "source": "cba",
+          "heading": "Side letters \u2014 PDF page 215",
+          "score": 35
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "topic": "grievance",
+      "question": "How long do I have to appeal to Step III?",
+      "expected": [
+        "cba-112"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 65
+        },
+        {
+          "id": "pr-101",
+          "source": "personnel",
+          "heading": "Section 9 - Step Three: Appeal to the Grievance Review Board",
+          "score": 35
+        },
+        {
+          "id": "cba-027",
+          "source": "cba",
+          "heading": "Section 5.2 \u2014 Schedules",
+          "score": 34
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 34
+        },
+        {
+          "id": "cba-107",
+          "source": "cba",
+          "heading": "Section 19.2 - Limitation",
+          "score": 31
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "topic": "grievance",
+      "question": "How long does the union have to request arbitration after the Step III decision?",
+      "expected": [
+        "cba-112"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 112
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 90
+        },
+        {
+          "id": "cba-113",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014b) Procedures for Arbitrations of Suspensions of Over Thirty (30) Days and",
+          "score": 70
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 57
+        },
+        {
+          "id": "cba-077",
+          "source": "cba",
+          "heading": "Section 13.1 - New or Merged Job Classifications",
+          "score": 57
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "topic": "grievance",
+      "question": "How long does the union have to request arbitration of a discharge or suspension over thirty days?",
+      "expected": [
+        "cba-113"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-113",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014b) Procedures for Arbitrations of Suspensions of Over Thirty (30) Days and",
+          "score": 281
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 81
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 76
+        },
+        {
+          "id": "cba-111",
+          "source": "cba",
+          "heading": "ARTICLE 21-GRIEVANCES AND ARBITRATION",
+          "score": 73
+        },
+        {
+          "id": "pr-118",
+          "source": "personnel",
+          "heading": "Section 3 - Notification - Suspensions of Thirty (30) Days or Less",
+          "score": 70
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "topic": "grievance",
+      "question": "Can a steward attend grievance meetings?",
+      "expected": [
+        "cba-114"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 190
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 53
+        },
+        {
+          "id": "cba-016",
+          "source": "cba",
+          "heading": "Section 3.6 - Pay for Meetings",
+          "score": 50
+        },
+        {
+          "id": "cba-018",
+          "source": "cba",
+          "heading": "Section 3.8\u2014Union Meetings",
+          "score": 47
+        },
+        {
+          "id": "cba-111",
+          "source": "cba",
+          "heading": "ARTICLE 21-GRIEVANCES AND ARBITRATION",
+          "score": 42
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "topic": "grievance",
+      "question": "What happens if management misses a grievance response deadline?",
+      "expected": [
+        "cba-114"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 142
+        },
+        {
+          "id": "cba-111",
+          "source": "cba",
+          "heading": "ARTICLE 21-GRIEVANCES AND ARBITRATION",
+          "score": 52
+        },
+        {
+          "id": "cba-020",
+          "source": "cba",
+          "heading": "Section 4.1 - Labor/Management",
+          "score": 49
+        },
+        {
+          "id": "cba-116",
+          "source": "cba",
+          "heading": "Section 21.4--Grievance Resolutions",
+          "score": 45
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 42
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "topic": "grievance",
+      "question": "Do I have to follow a supervisor's order while my grievance is pending?",
+      "expected": [
+        "cba-114"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 155
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 71
+        },
+        {
+          "id": "cba-111",
+          "source": "cba",
+          "heading": "ARTICLE 21-GRIEVANCES AND ARBITRATION",
+          "score": 57
+        },
+        {
+          "id": "cba-115",
+          "source": "cba",
+          "heading": "Section 21.3 - Mediation",
+          "score": 46
+        },
+        {
+          "id": "cba-116",
+          "source": "cba",
+          "heading": "Section 21.4--Grievance Resolutions",
+          "score": 45
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "topic": "grievance",
+      "question": "Can one grievance cover a group of employees?",
+      "expected": [
+        "cba-114"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 160
+        },
+        {
+          "id": "cba-047",
+          "source": "cba",
+          "heading": "ARTICLE 10 - GROUP HEALTH, VISION CARE, DENTAL,",
+          "score": 61
+        },
+        {
+          "id": "cba-051",
+          "source": "cba",
+          "heading": "Section 10.4 \u2014 Family Coverage",
+          "score": 59
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 57
+        },
+        {
+          "id": "cba-075",
+          "source": "cba",
+          "heading": "Section 12.10 - Probationary Employees",
+          "score": 52
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "topic": "probation",
+      "question": "How long is the probationary period for a new AFSCME employee?",
+      "expected": [
+        "cba-075"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-075",
+          "source": "cba",
+          "heading": "Section 12.10 - Probationary Employees",
+          "score": 192
+        },
+        {
+          "id": "pr-065",
+          "source": "personnel",
+          "heading": "Section 1 - Probationary Period",
+          "score": 58
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 53
+        },
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 53
+        },
+        {
+          "id": "cba-219",
+          "source": "cba",
+          "heading": "Side letters \u2014 PDF page 202",
+          "score": 52
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "topic": "probation",
+      "question": "When I finish probation, is my seniority date retroactive to my hire date?",
+      "expected": [
+        "cba-075"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-075",
+          "source": "cba",
+          "heading": "Section 12.10 - Probationary Employees",
+          "score": 187
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 54
+        },
+        {
+          "id": "cba-065",
+          "source": "cba",
+          "heading": "Section 12.1 \u2014 Definition",
+          "score": 53
+        },
+        {
+          "id": "cba-073",
+          "source": "cba",
+          "heading": "Section 12.9 - Acting In A Higher-Rated Job",
+          "score": 51
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 48
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "topic": "probation",
+      "question": "What rights do I have if I get a suspension after the first six months of probation?",
+      "expected": [
+        "cba-075"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-075",
+          "source": "cba",
+          "heading": "Section 12.10 - Probationary Employees",
+          "score": 183
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 63
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 54
+        },
+        {
+          "id": "cba-059",
+          "source": "cba",
+          "heading": "Section 11.4 \u2014 Unaaid Leaves",
+          "score": 52
+        },
+        {
+          "id": "cba-113",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014b) Procedures for Arbitrations of Suspensions of Over Thirty (30) Days and",
+          "score": 47
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "topic": "probation",
+      "question": "Do probationary employees get dental insurance?",
+      "expected": [
+        "cba-075"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-075",
+          "source": "cba",
+          "heading": "Section 12.10 - Probationary Employees",
+          "score": 184
+        },
+        {
+          "id": "cba-052",
+          "source": "cba",
+          "heading": "Section 10.5 \u2014 Maintenance of Insurance",
+          "score": 61
+        },
+        {
+          "id": "cba-049",
+          "source": "cba",
+          "heading": "Section 10.2 - Insurance Disputes",
+          "score": 58
+        },
+        {
+          "id": "cba-047",
+          "source": "cba",
+          "heading": "ARTICLE 10 - GROUP HEALTH, VISION CARE, DENTAL,",
+          "score": 52
+        },
+        {
+          "id": "cba-048",
+          "source": "cba",
+          "heading": "Section 10.1 - Policy Provisions",
+          "score": 42
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "topic": "seniority_jobs",
+      "question": "What does seniority or continuous service mean under the contract?",
+      "expected": [
+        "cba-065"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-065",
+          "source": "cba",
+          "heading": "Section 12.1 \u2014 Definition",
+          "score": 188
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 98
+        },
+        {
+          "id": "cba-075",
+          "source": "cba",
+          "heading": "Section 12.10 - Probationary Employees",
+          "score": 87
+        },
+        {
+          "id": "cba-067",
+          "source": "cba",
+          "heading": "Section 12.3 \u2014 Interruption In Service",
+          "score": 84
+        },
+        {
+          "id": "cba-066",
+          "source": "cba",
+          "heading": "Section 12.2 \u2014 Reciprocity",
+          "score": 80
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "topic": "seniority_jobs",
+      "question": "Does prior service with another public agency count toward seniority?",
+      "expected": [
+        "cba-066"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-066",
+          "source": "cba",
+          "heading": "Section 12.2 \u2014 Reciprocity",
+          "score": 179
+        },
+        {
+          "id": "cba-065",
+          "source": "cba",
+          "heading": "Section 12.1 \u2014 Definition",
+          "score": 159
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 79
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 75
+        },
+        {
+          "id": "cba-075",
+          "source": "cba",
+          "heading": "Section 12.10 - Probationary Employees",
+          "score": 72
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "topic": "seniority_jobs",
+      "question": "Can I lose seniority if I am absent five days without calling in?",
+      "expected": [
+        "cba-068"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-068",
+          "source": "cba",
+          "heading": "Section 12.4 \u2014 Break In Service",
+          "score": 184
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 71
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 62
+        },
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 60
+        },
+        {
+          "id": "cba-070",
+          "source": "cba",
+          "heading": "Section 12.6 \u2014 Balancing the Workforce",
+          "score": 59
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "topic": "seniority_jobs",
+      "question": "Who gets laid off first when positions are cut?",
+      "expected": [
+        "cba-069"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 151
+        },
+        {
+          "id": "cba-041",
+          "source": "cba",
+          "heading": "Section 7.4 \u2014 Employees Laid Off, On Leave of Absence or Discharged",
+          "score": 53
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 48
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 45
+        },
+        {
+          "id": "cba-017",
+          "source": "cba",
+          "heading": "Section 3.7 - Time Off For Union Activities",
+          "score": 41
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "topic": "seniority_jobs",
+      "question": "How do I request a change in shift, days off, or work location?",
+      "expected": [
+        "cba-071"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 195
+        },
+        {
+          "id": "cba-092",
+          "source": "cba",
+          "heading": "Section 16.4 - Changes in Schedules",
+          "score": 91
+        },
+        {
+          "id": "cba-070",
+          "source": "cba",
+          "heading": "Section 12.6 \u2014 Balancing the Workforce",
+          "score": 90
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 80
+        },
+        {
+          "id": "cba-031",
+          "source": "cba",
+          "heading": "Section 6.1 \u2014 Current Holidays",
+          "score": 70
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "topic": "seniority_jobs",
+      "question": "How long is a permanent vacancy posted for bidding?",
+      "expected": [
+        "cba-071"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 166
+        },
+        {
+          "id": "cba-073",
+          "source": "cba",
+          "heading": "Section 12.9 - Acting In A Higher-Rated Job",
+          "score": 66
+        },
+        {
+          "id": "cba-074",
+          "source": "cba",
+          "heading": "Section 12.7 of this Agreement. If no such vacancy exists within the Department, the employee",
+          "score": 45
+        },
+        {
+          "id": "cba-225",
+          "source": "cba",
+          "heading": "Side letters \u2014 PDF page 208",
+          "score": 43
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 38
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "topic": "seniority_jobs",
+      "question": "How does the City choose among qualified bidders for a vacancy?",
+      "expected": [
+        "cba-071"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 152
+        },
+        {
+          "id": "cba-044",
+          "source": "cba",
+          "heading": "Section 7.7 \u2014 Recigrocity with Other Agencies",
+          "score": 42
+        },
+        {
+          "id": "cba-203",
+          "source": "cba",
+          "heading": "SIDE LETTER 17",
+          "score": 41
+        },
+        {
+          "id": "cba-074",
+          "source": "cba",
+          "heading": "Section 12.7 of this Agreement. If no such vacancy exists within the Department, the employee",
+          "score": 40
+        },
+        {
+          "id": "cba-066",
+          "source": "cba",
+          "heading": "Section 12.2 \u2014 Reciprocity",
+          "score": 39
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "topic": "seniority_jobs",
+      "question": "How long is the evaluation period after I win a bid?",
+      "expected": [
+        "cba-071"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 159
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 58
+        },
+        {
+          "id": "cba-023",
+          "source": "cba",
+          "heading": "Section 4.4 - Job Evaluation",
+          "score": 52
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 52
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 51
+        }
+      ]
+    },
+    {
+      "id": "Q051",
+      "topic": "seniority_jobs",
+      "question": "How long can management detail me to another assignment?",
+      "expected": [
+        "cba-072"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-072",
+          "source": "cba",
+          "heading": "Section 12.8 - Detailin",
+          "score": 150
+        },
+        {
+          "id": "cba-020",
+          "source": "cba",
+          "heading": "Section 4.1 - Labor/Management",
+          "score": 47
+        },
+        {
+          "id": "cba-007",
+          "source": "cba",
+          "heading": "Section 2.1 - Management Rights",
+          "score": 44
+        },
+        {
+          "id": "cba-053",
+          "source": "cba",
+          "heading": "Section 10.6 \u2014 Joint Labor Management Cooperation Committee on Health Care",
+          "score": 40
+        },
+        {
+          "id": "cba-070",
+          "source": "cba",
+          "heading": "Section 12.6 \u2014 Balancing the Workforce",
+          "score": 39
+        }
+      ]
+    },
+    {
+      "id": "Q052",
+      "topic": "seniority_jobs",
+      "question": "If I do a higher-rated job for four days, when do I get higher pay?",
+      "expected": [
+        "cba-073"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-073",
+          "source": "cba",
+          "heading": "Section 12.9 - Acting In A Higher-Rated Job",
+          "score": 224
+        },
+        {
+          "id": "cba-097",
+          "source": "cba",
+          "heading": "Section 16.9 \u2014 Call In Pa",
+          "score": 130
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 62
+        },
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 61
+        },
+        {
+          "id": "cba-077",
+          "source": "cba",
+          "heading": "Section 13.1 - New or Merged Job Classifications",
+          "score": 56
+        }
+      ]
+    },
+    {
+      "id": "Q053",
+      "topic": "seniority_jobs",
+      "question": "Can I refuse an assignment outside the bargaining unit?",
+      "expected": [
+        "cba-073"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-073",
+          "source": "cba",
+          "heading": "Section 12.9 - Acting In A Higher-Rated Job",
+          "score": 185
+        },
+        {
+          "id": "cba-004",
+          "source": "cba",
+          "heading": "Section 1.2 - Unit Work",
+          "score": 60
+        },
+        {
+          "id": "cba-192",
+          "source": "cba",
+          "heading": "Schedules / bargaining unit tables \u2014 PDF page 175",
+          "score": 51
+        },
+        {
+          "id": "cba-189",
+          "source": "cba",
+          "heading": "Schedules / bargaining unit tables \u2014 PDF page 172",
+          "score": 47
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 45
+        }
+      ]
+    },
+    {
+      "id": "Q054",
+      "topic": "records",
+      "question": "Can I inspect my personnel file?",
+      "expected": [
+        "cba-081"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 307
+        },
+        {
+          "id": "cba-082",
+          "source": "cba",
+          "heading": "Section 14.2 - Forms",
+          "score": 68
+        },
+        {
+          "id": "cba-083",
+          "source": "cba",
+          "heading": "Section 14.3 - Performance Evaluations",
+          "score": 53
+        },
+        {
+          "id": "cba-080",
+          "source": "cba",
+          "heading": "ARTICLE 14 - PERSONNEL RECORDS, FORMS AND FILES",
+          "score": 48
+        },
+        {
+          "id": "cba-084",
+          "source": "cba",
+          "heading": "Section 14.4 - Polv~raph",
+          "score": 48
+        }
+      ]
+    },
+    {
+      "id": "Q055",
+      "topic": "records",
+      "question": "Can I put a rebuttal in my personnel file?",
+      "expected": [
+        "cba-081"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 289
+        },
+        {
+          "id": "cba-083",
+          "source": "cba",
+          "heading": "Section 14.3 - Performance Evaluations",
+          "score": 168
+        },
+        {
+          "id": "cba-080",
+          "source": "cba",
+          "heading": "ARTICLE 14 - PERSONNEL RECORDS, FORMS AND FILES",
+          "score": 48
+        },
+        {
+          "id": "cba-082",
+          "source": "cba",
+          "heading": "Section 14.2 - Forms",
+          "score": 48
+        },
+        {
+          "id": "cba-084",
+          "source": "cba",
+          "heading": "Section 14.4 - Polv~raph",
+          "score": 48
+        }
+      ]
+    },
+    {
+      "id": "Q056",
+      "topic": "records",
+      "question": "How long can old discipline be used against me?",
+      "expected": [
+        "cba-081"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 257
+        },
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 257
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 40
+        },
+        {
+          "id": "cba-124",
+          "source": "cba",
+          "heading": "Section 24.1 - Prohibition Against Discrimination",
+          "score": 39
+        },
+        {
+          "id": "cba-007",
+          "source": "cba",
+          "heading": "Section 2.1 - Management Rights",
+          "score": 35
+        }
+      ]
+    },
+    {
+      "id": "Q057",
+      "topic": "records",
+      "question": "Can management make me sign an undated resignation or blank form?",
+      "expected": [
+        "cba-082"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-082",
+          "source": "cba",
+          "heading": "Section 14.2 - Forms",
+          "score": 171
+        },
+        {
+          "id": "cba-053",
+          "source": "cba",
+          "heading": "Section 10.6 \u2014 Joint Labor Management Cooperation Committee on Health Care",
+          "score": 57
+        },
+        {
+          "id": "cba-020",
+          "source": "cba",
+          "heading": "Section 4.1 - Labor/Management",
+          "score": 54
+        },
+        {
+          "id": "cba-086",
+          "source": "cba",
+          "heading": "Section 15.1 - Personnel Transactions",
+          "score": 52
+        },
+        {
+          "id": "cba-132",
+          "source": "cba",
+          "heading": "Section 25.4- Failure to Make Timelv Deductions",
+          "score": 52
+        }
+      ]
+    },
+    {
+      "id": "Q058",
+      "topic": "records",
+      "question": "What rights do I have to respond to a performance evaluation?",
+      "expected": [
+        "cba-083"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-083",
+          "source": "cba",
+          "heading": "Section 14.3 - Performance Evaluations",
+          "score": 172
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 65
+        },
+        {
+          "id": "cba-023",
+          "source": "cba",
+          "heading": "Section 4.4 - Job Evaluation",
+          "score": 45
+        },
+        {
+          "id": "pr-087",
+          "source": "personnel",
+          "heading": "Section 5 - Review of Performance Evaluation",
+          "score": 42
+        },
+        {
+          "id": "pr-083",
+          "source": "personnel",
+          "heading": "Section 1 - Performance Evaluation Policy",
+          "score": 41
+        }
+      ]
+    },
+    {
+      "id": "Q059",
+      "topic": "leaves_accommodation",
+      "question": "How much bereavement leave do I get?",
+      "expected": [
+        "cba-056"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-056",
+          "source": "cba",
+          "heading": "Section 11.1 \u2014 Bereavement",
+          "score": 158
+        },
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 42
+        },
+        {
+          "id": "cba-057",
+          "source": "cba",
+          "heading": "Section 11.2 \u2014 Military",
+          "score": 42
+        },
+        {
+          "id": "cba-059",
+          "source": "cba",
+          "heading": "Section 11.4 \u2014 Unaaid Leaves",
+          "score": 42
+        },
+        {
+          "id": "cba-063",
+          "source": "cba",
+          "heading": "Section 11.8 \u2014 Paid Parental Leave",
+          "score": 42
+        }
+      ]
+    },
+    {
+      "id": "Q060",
+      "topic": "leaves_accommodation",
+      "question": "How long can I take an unpaid medical leave?",
+      "expected": [
+        "cba-059"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-059",
+          "source": "cba",
+          "heading": "Section 11.4 \u2014 Unaaid Leaves",
+          "score": 153
+        },
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 124
+        },
+        {
+          "id": "cba-063",
+          "source": "cba",
+          "heading": "Section 11.8 \u2014 Paid Parental Leave",
+          "score": 56
+        },
+        {
+          "id": "cba-057",
+          "source": "cba",
+          "heading": "Section 11.2 \u2014 Military",
+          "score": 47
+        },
+        {
+          "id": "cba-041",
+          "source": "cba",
+          "heading": "Section 7.4 \u2014 Employees Laid Off, On Leave of Absence or Discharged",
+          "score": 45
+        }
+      ]
+    },
+    {
+      "id": "Q061",
+      "topic": "leaves_accommodation",
+      "question": "Can I take time off for a religious holiday?",
+      "expected": [
+        "cba-060"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-060",
+          "source": "cba",
+          "heading": "Section 11.5 \u2014 Religious Day Accommodation",
+          "score": 181
+        },
+        {
+          "id": "cba-017",
+          "source": "cba",
+          "heading": "Section 3.7 - Time Off For Union Activities",
+          "score": 63
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 58
+        },
+        {
+          "id": "cba-033",
+          "source": "cba",
+          "heading": "Section 6.3 \u2014 Holiday Scheduling",
+          "score": 55
+        },
+        {
+          "id": "cba-034",
+          "source": "cba",
+          "heading": "Section 6.4 \u2014 Holiday Pa",
+          "score": 54
+        }
+      ]
+    },
+    {
+      "id": "Q062",
+      "topic": "leaves_accommodation",
+      "question": "If I have an emergency, can I use vacation or compensatory time without advance notice?",
+      "expected": [
+        "cba-061"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-061",
+          "source": "cba",
+          "heading": "Section 11.6 \u2014 Emergency Accommodation",
+          "score": 172
+        },
+        {
+          "id": "cba-099",
+          "source": "cba",
+          "heading": "Section 16.11- Use of Compensatory Time",
+          "score": 170
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 68
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 65
+        },
+        {
+          "id": "cba-043",
+          "source": "cba",
+          "heading": "Section 7.6 \u2014 Selection",
+          "score": 59
+        }
+      ]
+    },
+    {
+      "id": "Q063",
+      "topic": "leaves_accommodation",
+      "question": "What happens when I request a reasonable accommodation?",
+      "expected": [
+        "cba-062"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-062",
+          "source": "cba",
+          "heading": "Section 11.7 \u2014 Reasonable Accommodation",
+          "score": 176
+        },
+        {
+          "id": "pr-057",
+          "source": "personnel",
+          "heading": "Section 8 \u2013 Reasonable Accommodation Lists",
+          "score": 50
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 49
+        },
+        {
+          "id": "cba-060",
+          "source": "cba",
+          "heading": "Section 11.5 \u2014 Religious Day Accommodation",
+          "score": 46
+        },
+        {
+          "id": "cba-061",
+          "source": "cba",
+          "heading": "Section 11.6 \u2014 Emergency Accommodation",
+          "score": 42
+        }
+      ]
+    },
+    {
+      "id": "Q064",
+      "topic": "leaves_accommodation",
+      "question": "How much paid parental leave is available?",
+      "expected": [
+        "cba-063"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-063",
+          "source": "cba",
+          "heading": "Section 11.8 \u2014 Paid Parental Leave",
+          "score": 186
+        },
+        {
+          "id": "cba-099",
+          "source": "cba",
+          "heading": "Section 16.11- Use of Compensatory Time",
+          "score": 112
+        },
+        {
+          "id": "cba-059",
+          "source": "cba",
+          "heading": "Section 11.4 \u2014 Unaaid Leaves",
+          "score": 55
+        },
+        {
+          "id": "cba-035",
+          "source": "cba",
+          "heading": "Section 6.5 \u2014 Sick Leave",
+          "score": 50
+        },
+        {
+          "id": "cba-057",
+          "source": "cba",
+          "heading": "Section 11.2 \u2014 Military",
+          "score": 50
+        }
+      ]
+    },
+    {
+      "id": "Q065",
+      "topic": "health_safety",
+      "question": "How do I raise a health or safety complaint through the union committee?",
+      "expected": [
+        "cba-021"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-021",
+          "source": "cba",
+          "heading": "Section 4.2 - Health and S",
+          "score": 193
+        },
+        {
+          "id": "cba-107",
+          "source": "cba",
+          "heading": "Section 19.2 - Limitation",
+          "score": 108
+        },
+        {
+          "id": "cba-053",
+          "source": "cba",
+          "heading": "Section 10.6 \u2014 Joint Labor Management Cooperation Committee on Health Care",
+          "score": 68
+        },
+        {
+          "id": "cba-020",
+          "source": "cba",
+          "heading": "Section 4.1 - Labor/Management",
+          "score": 61
+        },
+        {
+          "id": "cba-054",
+          "source": "cba",
+          "heading": "Section 10.7 \u2014 Health Plan Reoaener",
+          "score": 59
+        }
+      ]
+    },
+    {
+      "id": "Q066",
+      "topic": "health_safety",
+      "question": "What does the contract say about providing a safe workplace?",
+      "expected": [
+        "cba-106"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-106",
+          "source": "cba",
+          "heading": "Section 19.1 - General D",
+          "score": 154
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 48
+        },
+        {
+          "id": "cba-107",
+          "source": "cba",
+          "heading": "Section 19.2 - Limitation",
+          "score": 47
+        },
+        {
+          "id": "cba-140",
+          "source": "cba",
+          "heading": "Section 27.1 - Policv Statement",
+          "score": 39
+        },
+        {
+          "id": "cba-105",
+          "source": "cba",
+          "heading": "ARTICLE 19 - HEALTH AND SAFETY",
+          "score": 34
+        }
+      ]
+    },
+    {
+      "id": "Q067",
+      "topic": "health_safety",
+      "question": "Can a health and safety grievance go to arbitration?",
+      "expected": [
+        "cba-107"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-107",
+          "source": "cba",
+          "heading": "Section 19.2 - Limitation",
+          "score": 214
+        },
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 69
+        },
+        {
+          "id": "cba-115",
+          "source": "cba",
+          "heading": "Section 21.3 - Mediation",
+          "score": 68
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 64
+        },
+        {
+          "id": "cba-111",
+          "source": "cba",
+          "heading": "ARTICLE 21-GRIEVANCES AND ARBITRATION",
+          "score": 63
+        }
+      ]
+    },
+    {
+      "id": "Q068",
+      "topic": "health_safety",
+      "question": "What equipment should a video display terminal workstation have?",
+      "expected": [
+        "cba-108"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-108",
+          "source": "cba",
+          "heading": "Section 19.3 - Video Display Terminals (VDT)",
+          "score": 172
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 28
+        },
+        {
+          "id": "cba-054",
+          "source": "cba",
+          "heading": "Section 10.7 \u2014 Health Plan Reoaener",
+          "score": 27
+        },
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 27
+        },
+        {
+          "id": "cba-111",
+          "source": "cba",
+          "heading": "ARTICLE 21-GRIEVANCES AND ARBITRATION",
+          "score": 27
+        }
+      ]
+    },
+    {
+      "id": "Q069",
+      "topic": "other",
+      "question": "When can I get mileage reimbursement for using my own car for work?",
+      "expected": [
+        "cba-045"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-045",
+          "source": "cba",
+          "heading": "ARTICLE 8 - MILEAGE REIMBURSEMENT",
+          "score": 164
+        },
+        {
+          "id": "cba-004",
+          "source": "cba",
+          "heading": "Section 1.2 - Unit Work",
+          "score": 47
+        },
+        {
+          "id": "cba-047",
+          "source": "cba",
+          "heading": "ARTICLE 10 - GROUP HEALTH, VISION CARE, DENTAL,",
+          "score": 47
+        },
+        {
+          "id": "cba-054",
+          "source": "cba",
+          "heading": "Section 10.7 \u2014 Health Plan Reoaener",
+          "score": 47
+        },
+        {
+          "id": "cba-070",
+          "source": "cba",
+          "heading": "Section 12.6 \u2014 Balancing the Workforce",
+          "score": 47
+        }
+      ]
+    },
+    {
+      "id": "Q070",
+      "topic": "other",
+      "question": "How much does the City contribute to deferred compensation?",
+      "expected": [
+        "cba-046"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-046",
+          "source": "cba",
+          "heading": "ARTICLE 9 - DEFERRED COMPENSATION",
+          "score": 174
+        },
+        {
+          "id": "cba-044",
+          "source": "cba",
+          "heading": "Section 7.7 \u2014 Recigrocity with Other Agencies",
+          "score": 42
+        },
+        {
+          "id": "cba-066",
+          "source": "cba",
+          "heading": "Section 12.2 \u2014 Reciprocity",
+          "score": 39
+        },
+        {
+          "id": "cba-228",
+          "source": "cba",
+          "heading": "Side letters \u2014 PDF page 211",
+          "score": 33
+        },
+        {
+          "id": "cba-027",
+          "source": "cba",
+          "heading": "Section 5.2 \u2014 Schedules",
+          "score": 30
+        }
+      ]
+    },
+    {
+      "id": "Q071",
+      "topic": "other",
+      "question": "Can the union use City bulletin boards and email to communicate with employees?",
+      "expected": [
+        "cba-013"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-013",
+          "source": "cba",
+          "heading": "Section 3.3 - Bulletin Boards",
+          "score": 195
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 66
+        },
+        {
+          "id": "cba-016",
+          "source": "cba",
+          "heading": "Section 3.6 - Pay for Meetings",
+          "score": 65
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 62
+        },
+        {
+          "id": "cba-086",
+          "source": "cba",
+          "heading": "Section 15.1 - Personnel Transactions",
+          "score": 61
+        }
+      ]
+    },
+    {
+      "id": "Q072",
+      "topic": "other",
+      "question": "How soon after I am hired should I get a union orientation?",
+      "expected": [
+        "cba-016"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-016",
+          "source": "cba",
+          "heading": "Section 3.6 - Pay for Meetings",
+          "score": 162
+        },
+        {
+          "id": "cba-086",
+          "source": "cba",
+          "heading": "Section 15.1 - Personnel Transactions",
+          "score": 62
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 61
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 60
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 59
+        }
+      ]
+    },
+    {
+      "id": "Q073",
+      "topic": "other",
+      "question": "How much notice does the union get before the City contracts out bargaining unit work?",
+      "expected": [
+        "cba-117"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 216
+        },
+        {
+          "id": "cba-004",
+          "source": "cba",
+          "heading": "Section 1.2 - Unit Work",
+          "score": 94
+        },
+        {
+          "id": "cba-069",
+          "source": "cba",
+          "heading": "Section 12.5 \u2014 Layoff/Recall",
+          "score": 88
+        },
+        {
+          "id": "cba-192",
+          "source": "cba",
+          "heading": "Schedules / bargaining unit tables \u2014 PDF page 175",
+          "score": 77
+        },
+        {
+          "id": "cba-071",
+          "source": "cba",
+          "heading": "Section 12.7 - Filling of Permanent Vacancies",
+          "score": 70
+        }
+      ]
+    },
+    {
+      "id": "Q074",
+      "topic": "other",
+      "question": "Does the contract protect me from discrimination because of union activity?",
+      "expected": [
+        "cba-125"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-125",
+          "source": "cba",
+          "heading": "Section 24.2 - Union Activity",
+          "score": 167
+        },
+        {
+          "id": "cba-126",
+          "source": "cba",
+          "heading": "Section 24.3 - Union Non-Participation",
+          "score": 58
+        },
+        {
+          "id": "cba-127",
+          "source": "cba",
+          "heading": "Section 24.4 - Employer/Union Cooperation",
+          "score": 53
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 50
+        },
+        {
+          "id": "cba-013",
+          "source": "cba",
+          "heading": "Section 3.3 - Bulletin Boards",
+          "score": 47
+        }
+      ]
+    },
+    {
+      "id": "Q075",
+      "topic": "other",
+      "question": "How are union dues deductions authorized?",
+      "expected": [
+        "cba-129"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-129",
+          "source": "cba",
+          "heading": "Section 25.1 - Indemnification/Authorization",
+          "score": 179
+        },
+        {
+          "id": "cba-132",
+          "source": "cba",
+          "heading": "Section 25.4- Failure to Make Timelv Deductions",
+          "score": 69
+        },
+        {
+          "id": "cba-131",
+          "source": "cba",
+          "heading": "Section 25.3- P. E.O.P. L. E. Deductions",
+          "score": 48
+        },
+        {
+          "id": "cba-120",
+          "source": "cba",
+          "heading": "Section 23.2 - Union Efforts",
+          "score": 47
+        },
+        {
+          "id": "cba-012",
+          "source": "cba",
+          "heading": "Section 3.2 - Right of Access",
+          "score": 45
+        }
+      ]
+    },
+    {
+      "id": "Q076",
+      "topic": "source_governance",
+      "question": "The Personnel Rules say probation is six months. I am in AFSCME. How long is my probation?",
+      "expected": [
+        "cba-075"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-075",
+          "source": "cba",
+          "heading": "Section 12.10 - Probationary Employees",
+          "score": 168
+        },
+        {
+          "id": "pr-002",
+          "source": "personnel",
+          "heading": "GOALS AND PRINCIPLES OF THE PERSONNEL RULES",
+          "score": 58
+        },
+        {
+          "id": "cba-142",
+          "source": "cba",
+          "heading": "Section 27.3 - Disciplinary Action",
+          "score": 50
+        },
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 47
+        },
+        {
+          "id": "cba-037",
+          "source": "cba",
+          "heading": "Section 7.1 \u2014 Amount",
+          "score": 45
+        }
+      ]
+    },
+    {
+      "id": "Q077",
+      "topic": "source_governance",
+      "question": "Should I use the City Personnel Rules grievance procedure or the AFSCME contract grievance procedure?",
+      "expected": [
+        "cba-112",
+        "cba-111"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "cba-112",
+          "source": "cba",
+          "heading": "Section - 21.1\u2014a1 Grievance Procedur",
+          "score": 223
+        },
+        {
+          "id": "cba-110",
+          "source": "cba",
+          "heading": "ARTICLE 20 - DISCIPLINE AND PREDISCIPLINARY PROCEDURES",
+          "score": 74
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 72
+        },
+        {
+          "id": "cba-114",
+          "source": "cba",
+          "heading": "Section 21.2 - Reasonable Time For Union Stewards/Meeting Rooms/Miscellaneous Grievance",
+          "score": 69
+        },
+        {
+          "id": "cba-223",
+          "source": "cba",
+          "heading": "SIDE LETTER 36",
+          "score": 66
+        }
+      ]
+    },
+    {
+      "id": "Q078",
+      "topic": "source_governance",
+      "question": "If the Personnel Rules and the AFSCME contract conflict, which one controls my represented employment rights?",
+      "expected": [
+        "pr-002"
+      ],
+      "rank": 1,
+      "top_results": [
+        {
+          "id": "pr-002",
+          "source": "personnel",
+          "heading": "GOALS AND PRINCIPLES OF THE PERSONNEL RULES",
+          "score": 254
+        },
+        {
+          "id": "cba-081",
+          "source": "cba",
+          "heading": "Section 14.1 - Employee Files",
+          "score": 59
+        },
+        {
+          "id": "cba-117",
+          "source": "cba",
+          "heading": "ARTICLE 22 - CONTRACTING OUT",
+          "score": 59
+        },
+        {
+          "id": "cba-009",
+          "source": "cba",
+          "heading": "Section 2.3 - Rules of Conduct",
+          "score": 53
+        },
+        {
+          "id": "cba-007",
+          "source": "cba",
+          "heading": "Section 2.1 - Management Rights",
+          "score": 51
+        }
+      ]
+    }
+  ]
+}

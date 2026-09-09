@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#006b3c">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="AFSCME Local 2912 Member Hub development build: accessible contract search, Weingarten Rights, union calendar, steward contact and member resources.">
+  <title>Local 2912 Member Hub</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/feed-utils.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="app-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Local 2912 Member Hub home">
+      <span class="brand-mark" aria-hidden="true">2912</span>
+      <span class="brand-text"><strong>Local 2912</strong><span>Member Hub</span></span>
+    </a>
+    <button id="install-button" class="button button-secondary install-button" type="button" hidden>Install app</button>
+  </header>
+
+  <div id="offline-banner" class="offline-banner" role="status" hidden>
+    You are offline. Core rights information remains available.
+  </div>
+
+  <main id="main-content" tabindex="-1">
+    <section class="page" data-route="home" aria-labelledby="home-title">
+      <div class="hero">
+        <p class="eyebrow">AFSCME Local 2912</p>
+        <h1 id="home-title" tabindex="-1">Your union. Your contract. Your rights.</h1>
+        <p>Fast access to workplace rights, contract information, union events and help from your union.</p>
+      </div>
+
+      <section aria-labelledby="quick-actions-title">
+        <h2 id="quick-actions-title">Quick actions</h2>
+        <div class="action-grid">
+          <a class="action-card action-card-featured" href="#ask">
+            <span class="action-icon" aria-hidden="true">?</span>
+            <span><strong>Ask 2912</strong><small>Ask a contract or workplace question</small></span>
+          </a>
+          <a class="action-card" href="#contract">
+            <span class="action-icon" aria-hidden="true">CBA</span>
+            <span><strong>Search my contract</strong><small>Find contract language by topic or keyword</small></span>
+          </a>
+          <a class="action-card" href="#weingarten">
+            <span class="action-icon" aria-hidden="true">WR</span>
+            <span><strong>Weingarten Rights</strong><small>Management wants to question you?</small></span>
+          </a>
+          <a class="action-card" href="#steward">
+            <span class="action-icon" aria-hidden="true">HELP</span>
+            <span><strong>Contact a steward</strong><small>Get help with a workplace issue</small></span>
+          </a>
+          <a class="action-card" href="#workplace">
+            <span class="action-icon" aria-hidden="true">!</span>
+            <span><strong>Workplace problem</strong><small>Find the right next step</small></span>
+          </a>
+          <a class="action-card" href="#calendar">
+            <span class="action-icon" aria-hidden="true">CAL</span>
+            <span><strong>Union calendar</strong><small>Meetings, training and member events</small></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="upcoming-title">
+        <div class="section-heading-row">
+          <h2 id="upcoming-title">Upcoming</h2>
+          <a href="#calendar">View calendar</a>
+        </div>
+        <div id="home-events" class="event-list" aria-live="polite">
+          <p class="muted">Live calendar not connected yet.</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="announcements-title">
+        <div class="section-heading-row">
+          <h2 id="announcements-title">Latest from Local 2912</h2>
+          <span id="announcements-status" class="status-chip" role="status">Loading…</span>
+        </div>
+        <div id="home-announcements" class="announcement-list">
+          <p class="muted">No announcements loaded.</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="member-info-title">
+        <h2 id="member-info-title">Member information</h2>
+        <div class="link-list">
+          <a href="#board">Meet your board</a>
+          <a href="#resources">Member resources</a>
+          <a href="#accessibility">Accessibility</a>
+          <a href="#sources">Source versions</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" data-route="ask" aria-labelledby="ask-title" hidden>
+      <p class="eyebrow">Contract and workplace information</p>
+      <h1 id="ask-title" tabindex="-1">Ask 2912</h1>
+      <p>Ask a workplace or contract question. The Member Hub first finds relevant Local 2912 sources on your device.</p>
+
+      <div class="notice notice-success">
+        <strong>No Local 2912 AI charges:</strong> this app does not use an OpenAI API key and Local 2912 does not supply AI tokens. If you choose the ChatGPT option, you use your own ChatGPT account and whatever access your own plan provides.
+      </div>
+      <div class="notice notice-info">
+        <strong>Nothing is sent automatically.</strong> The Member Hub prepares a source-grounded prompt locally. You review it first, then choose whether to copy it and open ChatGPT. Core contract search works without ChatGPT.
+      </div>
+
+      <form id="ask-form" class="stack" novalidate>
+        <label for="ask-question"><strong>What would you like help with?</strong></label>
+        <textarea id="ask-question" name="question" rows="5" maxlength="1000" aria-describedby="ask-help ask-error"></textarea>
+        <p id="ask-help" class="help-text">Do not include Social Security numbers, passwords, medical records, or other highly sensitive information. Asking the app does not notify the union.</p>
+        <p id="ask-error" class="error-text" role="alert" hidden>Please enter a question before submitting.</p>
+        <button class="button button-primary" type="submit">Find relevant union sources</button>
+      </form>
+
+      <div id="ask-progress" class="status-card" role="status" hidden>Searching approved sources…</div>
+
+      <article id="ask-response" class="answer-card" aria-labelledby="answer-title" hidden>
+        <h2 id="answer-title" tabindex="-1">Source lookup</h2>
+        <section aria-labelledby="your-question-title">
+          <h3 id="your-question-title">Your question</h3>
+          <p id="echo-question"></p>
+        </section>
+        <section aria-labelledby="relevant-title">
+          <h3 id="relevant-title">Potentially relevant source material</h3>
+          <p class="help-text">These are retrieval results, not a determination that a contract violation occurred.</p>
+          <div id="ask-source-matches" class="search-results-list"></div>
+        </section>
+        <div id="ask-risk-notice" class="notice notice-warning" hidden>
+          <strong>This may require prompt union attention.</strong> Discipline, investigations, discharge, suspension, retaliation, discrimination, accommodation and pay issues can involve deadlines or fact-specific rights.
+        </div>
+        <div class="notice notice-warning">
+          <strong>Important:</strong> Speaking with this app does not notify the union and does not preserve a grievance deadline. A Local 2912 steward should review specific workplace problems.
+        </div>
+
+        <section id="chatgpt-handoff" class="handoff-card" aria-labelledby="chatgpt-handoff-title" hidden>
+          <h3 id="chatgpt-handoff-title">Optional plain-language explanation with ChatGPT</h3>
+          <p>The Member Hub has prepared a prompt containing your question, Local 2912 instructions, and selected source excerpts. Review it before sharing it with an external service.</p>
+          <label for="chatgpt-prompt"><strong>Prepared prompt</strong></label>
+          <textarea id="chatgpt-prompt" class="prompt-preview" rows="16" aria-describedby="chatgpt-prompt-help"></textarea>
+          <p id="chatgpt-prompt-help" class="help-text">You may edit this text before copying it. The app does not send the prompt or your question anywhere automatically.</p>
+          <div class="button-stack handoff-actions">
+            <button id="copy-chatgpt-prompt" class="button button-primary" type="button">Copy prepared prompt</button>
+            <a id="open-chatgpt" class="button button-secondary" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Open ChatGPT <span class="sr-only">in a new tab</span></a>
+          </div>
+          <p class="help-text"><strong>Privacy reminder:</strong> once you submit information in ChatGPT, that interaction is governed by the settings and terms of your own ChatGPT account. Local 2912 does not receive the ChatGPT conversation through this Member Hub.</p>
+        </section>
+
+        <a class="button button-primary" href="#steward">Contact a steward</a>
+      </article>
+    </section>
+
+    <section class="page" data-route="contract" aria-labelledby="contract-title" hidden>
+      <p class="eyebrow">Authoritative member sources</p>
+      <h1 id="contract-title" tabindex="-1">Search your contract</h1>
+      <p>Search the AFSCME–City of Chicago collective bargaining agreement. You can optionally include the City of Chicago Personnel Rules as a supplemental source.</p>
+
+      <div class="notice notice-success">
+        <strong>Current CBA:</strong> <span id="active-cba-summary">Loading current version…</span><br>
+        <strong>Source mode:</strong> <span id="document-source-mode">Loading…</span>
+      </div>
+      <div class="notice notice-info">
+        <strong>Source hierarchy:</strong> The current CBA is the primary full agreement for represented employees. Active MOUs, amendments, side letters, or extensions are considered when their own language expressly modifies or supplements a provision. City Personnel Rules remain supplemental and do not override the applicable CBA.
+      </div>
+      <div class="notice notice-info">
+        <strong>Active supplemental agreements:</strong> <span id="active-supplement-summary">Loading…</span>
+      </div>
+
+      <form id="contract-search-form" class="search-form" role="search">
+        <label for="contract-search"><strong>Search the AFSCME–City of Chicago CBA</strong></label>
+        <div class="search-row">
+          <input id="contract-search" type="search" name="q" autocomplete="off" placeholder="Example: overtime" aria-describedby="contract-search-help">
+          <button class="button button-primary" type="submit">Search</button>
+        </div>
+        <p id="contract-search-help" class="help-text">Search results show accessible extracted text and link back to the official PDF. Active CBA supplements are searched automatically when connected.</p>
+        <label class="checkbox-row" for="include-personnel">
+          <input id="include-personnel" type="checkbox">
+          <span>Also search the City of Chicago Personnel Rules</span>
+        </label>
+      </form>
+      <p id="contract-load-status" class="muted" role="status">Loading source index…</p>
+      <div id="contract-search-results" class="panel" hidden></div>
+
+      <section aria-labelledby="topics-title">
+        <h2 id="topics-title">Browse by topic</h2>
+        <div class="topic-grid">
+          <button type="button" class="topic-button" data-query="pay wages salary">Pay</button>
+          <button type="button" class="topic-button" data-query="overtime">Overtime</button>
+          <button type="button" class="topic-button" data-query="schedule changes">Schedules</button>
+          <button type="button" class="topic-button" data-query="vacation">Vacation</button>
+          <button type="button" class="topic-button" data-query="sick leave">Sick leave</button>
+          <button type="button" class="topic-button" data-query="seniority continuous service">Seniority</button>
+          <button type="button" class="topic-button" data-query="discipline predisciplinary">Discipline</button>
+          <button type="button" class="topic-button" data-query="grievance arbitration">Grievances</button>
+          <button type="button" class="topic-button" data-query="probationary employees">Probation</button>
+          <button type="button" class="topic-button" data-query="reasonable accommodation">Accommodation</button>
+          <button type="button" class="topic-button" data-query="health safety">Health and safety</button>
+          <button type="button" class="topic-button" data-query="acting higher-rated job">Acting out of title</button>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="articles-title">
+        <h2 id="articles-title">Browse the CBA by Article</h2>
+        <div id="cba-article-list" class="article-list"><p class="muted">Loading Articles…</p></div>
+      </section>
+
+      <section class="panel" aria-labelledby="official-copy-title">
+        <h2 id="official-copy-title">Current official source documents</h2>
+        <p><strong>CBA:</strong> <span id="active-cba-summary-copy">Current active agreement</span></p>
+        <p><a id="current-cba-link" class="button button-secondary" href="docs/afscme-city-chicago-cba-2022-2027.pdf" target="_blank" rel="noopener">Open current CBA PDF <span class="sr-only">opens in a new tab</span></a></p>
+        <p><strong>Personnel Rules:</strong> <span id="active-personnel-summary">Loading current version…</span>. Supplemental source for represented employees.</p>
+        <p><a id="current-personnel-link" class="button button-secondary" href="docs/city-chicago-personnel-rules-2025-08-01.pdf" target="_blank" rel="noopener">Open current Personnel Rules PDF <span class="sr-only">opens in a new tab</span></a></p>
+        <p><a href="#sources">View current and archived source versions</a></p>
+      </section>
+    </section>
+
+    <section class="page" data-route="reader" aria-labelledby="reader-title" hidden>
+      <p class="eyebrow" id="reader-source-label">Official source text</p>
+      <h1 id="reader-title" tabindex="-1">Source reader</h1>
+      <p id="reader-context" class="lead"></p>
+      <div id="reader-authority-notice" class="notice notice-info" hidden></div>
+      <div id="reader-complex-notice" class="notice notice-warning" hidden>
+        <strong>Complex source layout:</strong> This source page contains a table or layout that may not yet be fully represented semantically in the extracted text. Use the official PDF as a cross-check and do not rely on layout alone.
+      </div>
+      <section class="panel" aria-labelledby="reader-text-title">
+        <h2 id="reader-text-title">Extracted official text</h2>
+        <div id="reader-text" class="source-text"></div>
+        <div id="reader-child-links" class="reader-child-links"></div>
+      </section>
+      <div class="button-stack">
+        <a id="reader-pdf-link" class="button button-secondary" href="#" target="_blank" rel="noopener">Open official PDF at this page <span class="sr-only">opens in a new tab</span></a>
+        <a class="button button-secondary" href="#contract">Back to contract search</a>
+        <a class="button button-primary" href="#steward">Contact a steward</a>
+      </div>
+      <p class="help-text">The HTML text is provided for accessible navigation and search. The bundled PDF remains the official source document. Extraction errors are possible and should be checked against the PDF when exact wording matters.</p>
+    </section>
+
+    <section class="page" data-route="weingarten" aria-labelledby="weingarten-title" hidden>
+      <p class="eyebrow">Know your rights</p>
+      <h1 id="weingarten-title" tabindex="-1">Management wants to question you?</h1>
+      <p class="lead"><strong>You may have the right to request union representation.</strong></p>
+
+      <div class="notice notice-warning">
+        <strong>Your CBA provides contractual representation rights.</strong> Article 20 gives employees who may be subject to discipline the right to request a Union representative during covered interrogations or disciplinary investigations. It also contains specific procedures for disciplinary interviews. Whether a particular meeting is covered depends on the facts.
+      </div>
+      <p><a id="article20-link" href="#contract">Read Article 20 in the accessible source reader</a></p>
+
+      <section class="rights-card" aria-labelledby="request-language-title">
+        <h2 id="request-language-title">Request representation</h2>
+        <p>If you believe the meeting could lead to discipline, you can clearly tell management that you are requesting union representation before continuing the investigatory interview.</p>
+        <button id="copy-rights" class="button button-primary" type="button">Copy suggested request</button>
+        <div id="rights-script" class="script-box" tabindex="0">
+          I am requesting union representation before I answer questions in an investigatory interview that I reasonably believe could result in discipline. I do not wish to give up that right.
+        </div>
+        <p class="help-text">This is suggested plain-language wording, not a required legal formula.</p>
+      </section>
+
+      <section aria-labelledby="remember-title">
+        <h2 id="remember-title">Remember</h2>
+        <ul class="check-list">
+          <li>Clearly request a Union representative if you believe questioning may lead to discipline.</li>
+          <li>Article 20 contains additional protections and procedures for disciplinary investigations and interviews.</li>
+          <li>Do not assume every meeting with a supervisor is the same; the facts and purpose of the meeting matter.</li>
+          <li>If you are unsure what kind of meeting this is, contact a steward promptly.</li>
+        </ul>
+      </section>
+
+      <div class="button-stack">
+        <a class="button button-primary" href="#steward">Contact a steward</a>
+        <a class="button button-secondary" href="https://ilrb.illinois.gov/" target="_blank" rel="noopener">Illinois Labor Relations Board <span class="sr-only">opens in a new tab</span></a>
+      </div>
+      <p class="muted">This page is included in the offline cache for quick access.</p>
+    </section>
+
+    <section class="page" data-route="workplace" aria-labelledby="workplace-title" hidden>
+      <p class="eyebrow">Find the right next step</p>
+      <h1 id="workplace-title" tabindex="-1">What is happening at work?</h1>
+      <p>Choose the closest match. These guides will help members preserve information and reach the appropriate union resource.</p>
+      <div class="topic-grid workplace-grid">
+        <button type="button" class="issue-button" data-issue="Discipline or investigation">Discipline or investigation</button>
+        <button type="button" class="issue-button" data-issue="Pay or overtime">Pay or overtime</button>
+        <button type="button" class="issue-button" data-issue="Schedule or shift">Schedule or shift</button>
+        <button type="button" class="issue-button" data-issue="Vacation or leave">Vacation or leave</button>
+        <button type="button" class="issue-button" data-issue="Promotion or bid">Promotion or bid</button>
+        <button type="button" class="issue-button" data-issue="Bullying or harassment">Bullying or harassment</button>
+        <button type="button" class="issue-button" data-issue="Accommodation">Accommodation</button>
+        <button type="button" class="issue-button" data-issue="Health or safety">Health or safety</button>
+        <button type="button" class="issue-button" data-issue="Probation">Probation</button>
+        <button type="button" class="issue-button" data-issue="Something else">Something else</button>
+      </div>
+      <section id="issue-guide" class="panel" aria-labelledby="issue-guide-title" hidden>
+        <h2 id="issue-guide-title" tabindex="-1">Issue guide</h2>
+        <p id="issue-name"></p>
+        <h3>Preserve</h3>
+        <ul>
+          <li>Dates, times and names</li>
+          <li>Relevant written notices</li>
+          <li>Emails, messages and schedules</li>
+          <li>Your factual notes about what happened</li>
+        </ul>
+        <p><strong>Do not assume using this guide notifies the union or stops a deadline.</strong></p>
+        <div class="button-stack">
+          <a id="issue-contract-link" class="button button-secondary" href="#contract" hidden>Search the CBA for this issue</a>
+          <a class="button button-primary" href="#steward">Contact a steward</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" data-route="steward" aria-labelledby="steward-title" hidden>
+      <p class="eyebrow">Get union help</p>
+      <h1 id="steward-title" tabindex="-1">Contact a steward</h1>
+      <p>Choose your department to see Local-approved public union contacts. This directory never exposes grievance files, member case notes, or the internal steward-management system.</p>
+      <p id="steward-data-status" class="status-chip" role="status">Loading public directory…</p>
+      <form class="stack" id="steward-directory-form">
+        <label for="department"><strong>Your department</strong></label>
+        <select id="department">
+          <option value="">Select a department</option>
+        </select>
+        <button class="button button-primary" type="submit">Find my union contact</button>
+      </form>
+      <div id="steward-results" class="card-list" aria-live="polite"></div>
+      <div class="notice notice-warning"><strong>Urgent workplace issue?</strong> Do not wait for the app to determine whether you have a grievance or deadline. Use an established Local 2912 contact method if the directory does not identify the right person.</div>
+    </section>
+
+    <section class="page" data-route="calendar" aria-labelledby="calendar-title" hidden>
+      <p class="eyebrow">Local 2912 events</p>
+      <h1 id="calendar-title" tabindex="-1">Union calendar</h1>
+      <p>The default accessible presentation is an upcoming-events list rather than a month grid. Authorized officers can maintain a dedicated Google Calendar without editing the app.</p>
+      <p id="calendar-data-status" class="status-chip" role="status">Loading calendar…</p>
+      <div id="calendar-events" class="event-list">
+        <p class="muted">No events loaded.</p>
+      </div>
+    </section>
+
+    <section class="page" data-route="board" aria-labelledby="board-title" hidden>
+      <p class="eyebrow">Your elected leadership</p>
+      <h1 id="board-title" tabindex="-1">Meet your board</h1>
+      <p>Only information approved for public member access is displayed here.</p>
+      <p id="board-data-status" class="status-chip" role="status">Loading board directory…</p>
+      <div id="board-list" class="card-list"></div>
+    </section>
+
+    <section class="page" data-route="resources" aria-labelledby="resources-title" hidden>
+      <p class="eyebrow">Quick access</p>
+      <h1 id="resources-title" tabindex="-1">Member resources</h1>
+      <p id="resources-data-status" class="status-chip" role="status">Loading resources…</p>
+      <div id="resource-list" class="resource-groups"></div>
+    </section>
+
+    <section class="page" data-route="accessibility" aria-labelledby="accessibility-title" hidden>
+      <p class="eyebrow">Built for all members</p>
+      <h1 id="accessibility-title" tabindex="-1">Accessibility</h1>
+      <p>The Member Hub is being designed so that critical union information does not depend solely on sight or solely on hearing.</p>
+
+      <section aria-labelledby="nonvisual-title">
+        <h2 id="nonvisual-title">Blind and low-vision access</h2>
+        <ul>
+          <li>Semantic HTML, headings and landmarks</li>
+          <li>Full keyboard navigation and visible focus</li>
+          <li>Screen-reader status announcements for dynamic content</li>
+          <li>Text scaling, reflow and strong contrast</li>
+          <li>Accessible HTML contract content rather than PDF-only access</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="deaf-title">
+        <h2 id="deaf-title">Deaf and hard-of-hearing access</h2>
+        <ul>
+          <li>Accurate closed captions for video</li>
+          <li>Complete transcripts for video and audio</li>
+          <li>ASL-interpreted versions or interpreter inset for key rights, training and major information where feasible</li>
+          <li>No critical alert communicated only by sound</li>
+          <li>Human review of automated captions before publication</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="media-standard-title">
+        <h2 id="media-standard-title">Accessible media standard</h2>
+        <p>When media is added, the interface will expose available alternatives with clear controls such as <strong>Captions</strong>, <strong>Transcript</strong> and <strong>ASL</strong>. ASL will supplement rather than replace captions.</p>
+      </section>
+    </section>
+
+    <section class="page" data-route="sources" aria-labelledby="sources-title" hidden>
+      <p class="eyebrow">Document governance</p>
+      <h1 id="sources-title" tabindex="-1">Source versions</h1>
+      <p>The Member Hub identifies the active CBA and Personnel Rules version used for search. Prior versions are preserved for historical questions and rollback rather than overwritten.</p>
+      <div class="notice notice-info">
+        <strong>Current-source rule:</strong> current member questions default to the active CBA and current Personnel Rules. Historical versions should be used only when the date of the workplace event makes them relevant.
+      </div>
+      <section class="panel" aria-labelledby="source-current-title">
+        <h2 id="source-current-title">Current sources</h2>
+        <p><strong>CBA:</strong> <span id="active-cba-summary-archive">Loading…</span></p>
+        <p><strong>Personnel Rules:</strong> <span id="active-personnel-summary-archive">Loading…</span></p>
+        <p><strong>Supplemental agreements:</strong> <span id="active-supplement-summary-archive">Loading…</span></p>
+      </section>
+      <section class="panel" aria-labelledby="source-archive-title">
+        <h2 id="source-archive-title">Version archive</h2>
+        <div id="source-version-list"><p class="muted">Loading source versions…</p></div>
+      </section>
+      <p class="help-text">The archive is informational. A steward should review which agreement/version applies to a historical workplace issue.</p>
+    </section>
+
+    <section class="page" data-route="more" aria-labelledby="more-title" hidden>
+      <p class="eyebrow">Local 2912</p>
+      <h1 id="more-title" tabindex="-1">More</h1>
+      <nav class="link-list" aria-label="More member hub sections">
+        <a href="#steward">Contact a steward</a>
+        <a href="#weingarten">Weingarten Rights</a>
+        <a href="#workplace">Workplace problem guide</a>
+        <a href="#board">Meet your board</a>
+        <a href="#resources">Member resources</a>
+        <a href="#accessibility">Accessibility</a>
+        <a href="#sources">Source versions</a>
+      </nav>
+    </section>
+  </main>
+
+  <aside id="steward-bar" class="steward-bar" aria-label="Union help">
+    <a href="#steward"><strong>Need union help?</strong> Contact a steward</a>
+  </aside>
+
+  <nav class="bottom-nav" aria-label="Primary">
+    <a href="#home" data-nav="home"><span aria-hidden="true">⌂</span><span>Home</span></a>
+    <a href="#contract" data-nav="contract"><span aria-hidden="true">CBA</span><span>Contract</span></a>
+    <a class="nav-ask" href="#ask" data-nav="ask"><span aria-hidden="true">?</span><span>Ask</span></a>
+    <a href="#calendar" data-nav="calendar"><span aria-hidden="true">CAL</span><span>Calendar</span></a>
+    <a href="#more" data-nav="more"><span aria-hidden="true">☰</span><span>More</span></a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>Stage 9 • v0.9.0 • Pilot build • Not yet an official member service</p>
+  </footer>
+</body>
+</html>

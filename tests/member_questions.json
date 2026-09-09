@@ -1,0 +1,711 @@
+{
+  "version": "1.0",
+  "description": "Stage 5 retrieval regression set for Local 2912 Member Hub. Expected IDs identify controlling or directly relevant CBA records in the supplied 2022-2027 agreement.",
+  "count": 78,
+  "items": [
+    {
+      "id": "Q001",
+      "topic": "work_hours",
+      "question": "When do I get time and a half for overtime?",
+      "expected_primary_ids": [
+        "cba-094"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q002",
+      "topic": "work_hours",
+      "question": "If I work on Sunday and Sunday is not part of my regular workweek, what rate do I get?",
+      "expected_primary_ids": [
+        "cba-094"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q003",
+      "topic": "work_hours",
+      "question": "How is overtime supposed to be offered?",
+      "expected_primary_ids": [
+        "cba-095"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q004",
+      "topic": "work_hours",
+      "question": "Can management force me to work overtime if nobody volunteers?",
+      "expected_primary_ids": [
+        "cba-095"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q005",
+      "topic": "work_hours",
+      "question": "If I am called in outside my regular hours, what is the minimum pay?",
+      "expected_primary_ids": [
+        "cba-097"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q006",
+      "topic": "work_hours",
+      "question": "If I report to work and there is no work for me, do I still get paid?",
+      "expected_primary_ids": [
+        "cba-096"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q007",
+      "topic": "work_hours",
+      "question": "Can I cash out my compensatory time?",
+      "expected_primary_ids": [
+        "cba-099"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q008",
+      "topic": "work_hours",
+      "question": "Can I request a flexible schedule or compressed workweek?",
+      "expected_primary_ids": [
+        "cba-100"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q009",
+      "topic": "work_hours",
+      "question": "How much notice do I get before management changes my work schedule?",
+      "expected_primary_ids": [
+        "cba-092"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q010",
+      "topic": "work_hours",
+      "question": "Can they change my shift with less than fourteen days notice?",
+      "expected_primary_ids": [
+        "cba-092"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q011",
+      "topic": "vacation_leave",
+      "question": "How much vacation do I get after fifteen years of City service?",
+      "expected_primary_ids": [
+        "cba-037"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q012",
+      "topic": "vacation_leave",
+      "question": "I am a new hire. Can I use any vacation during my first year?",
+      "expected_primary_ids": [
+        "cba-037"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q013",
+      "topic": "vacation_leave",
+      "question": "Can I carry unused vacation into next year?",
+      "expected_primary_ids": [
+        "cba-040"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q014",
+      "topic": "vacation_leave",
+      "question": "When do I submit my vacation preferences for next year?",
+      "expected_primary_ids": [
+        "cba-043"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q015",
+      "topic": "vacation_leave",
+      "question": "Can management cancel an approved vacation because of an emergency?",
+      "expected_primary_ids": [
+        "cba-043"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q016",
+      "topic": "vacation_leave",
+      "question": "What do I get paid if I work on a contract holiday?",
+      "expected_primary_ids": [
+        "cba-034"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q017",
+      "topic": "vacation_leave",
+      "question": "If a holiday falls on my regular day off, do I get another day off?",
+      "expected_primary_ids": [
+        "cba-033"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q018",
+      "topic": "vacation_leave",
+      "question": "How much sick leave do I earn?",
+      "expected_primary_ids": [
+        "cba-035"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q019",
+      "topic": "vacation_leave",
+      "question": "Can I use sick leave to care for a family or household member?",
+      "expected_primary_ids": [
+        "cba-035"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q020",
+      "topic": "vacation_leave",
+      "question": "Can I use sick leave in less than half-day increments?",
+      "expected_primary_ids": [
+        "cba-035"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q021",
+      "topic": "discipline",
+      "question": "My supervisor wants to question me about something that could lead to discipline. Can I have a steward?",
+      "expected_primary_ids": [
+        "cba-110"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q022",
+      "topic": "discipline",
+      "question": "Do I have a right to a union representative at a predisciplinary meeting?",
+      "expected_primary_ids": [
+        "cba-110"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q023",
+      "topic": "discipline",
+      "question": "Can I ask for a union representative during an interrogation about alleged misconduct?",
+      "expected_primary_ids": [
+        "cba-110"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q024",
+      "topic": "discipline",
+      "question": "What rights do I have if the Inspector General interviews me in a disciplinary investigation?",
+      "expected_primary_ids": [
+        "cba-110"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q025",
+      "topic": "discipline",
+      "question": "Can the City use evidence obtained in violation of my disciplinary investigation rights?",
+      "expected_primary_ids": [
+        "cba-110"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q026",
+      "topic": "discipline",
+      "question": "What is the process for an oral warning?",
+      "expected_primary_ids": [
+        "cba-110"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q027",
+      "topic": "discipline",
+      "question": "Does the contract require progressive discipline?",
+      "expected_primary_ids": [
+        "cba-110"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q028",
+      "topic": "discipline",
+      "question": "If I am disciplined, do they have to give me written reasons?",
+      "expected_primary_ids": [
+        "cba-110"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q029",
+      "topic": "grievance",
+      "question": "How long do I have to file a Step I grievance?",
+      "expected_primary_ids": [
+        "cba-112"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q030",
+      "topic": "grievance",
+      "question": "How long does my supervisor have to answer a Step I grievance?",
+      "expected_primary_ids": [
+        "cba-112"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q031",
+      "topic": "grievance",
+      "question": "How long do I have to appeal to Step II?",
+      "expected_primary_ids": [
+        "cba-112"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q032",
+      "topic": "grievance",
+      "question": "How long do I have to appeal to Step III?",
+      "expected_primary_ids": [
+        "cba-112"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q033",
+      "topic": "grievance",
+      "question": "How long does the union have to request arbitration after the Step III decision?",
+      "expected_primary_ids": [
+        "cba-112"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q034",
+      "topic": "grievance",
+      "question": "How long does the union have to request arbitration of a discharge or suspension over thirty days?",
+      "expected_primary_ids": [
+        "cba-113"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q035",
+      "topic": "grievance",
+      "question": "Can a steward attend grievance meetings?",
+      "expected_primary_ids": [
+        "cba-114"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q036",
+      "topic": "grievance",
+      "question": "What happens if management misses a grievance response deadline?",
+      "expected_primary_ids": [
+        "cba-114"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q037",
+      "topic": "grievance",
+      "question": "Do I have to follow a supervisor's order while my grievance is pending?",
+      "expected_primary_ids": [
+        "cba-114"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q038",
+      "topic": "grievance",
+      "question": "Can one grievance cover a group of employees?",
+      "expected_primary_ids": [
+        "cba-114"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q039",
+      "topic": "probation",
+      "question": "How long is the probationary period for a new AFSCME employee?",
+      "expected_primary_ids": [
+        "cba-075"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q040",
+      "topic": "probation",
+      "question": "When I finish probation, is my seniority date retroactive to my hire date?",
+      "expected_primary_ids": [
+        "cba-075"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q041",
+      "topic": "probation",
+      "question": "What rights do I have if I get a suspension after the first six months of probation?",
+      "expected_primary_ids": [
+        "cba-075"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q042",
+      "topic": "probation",
+      "question": "Do probationary employees get dental insurance?",
+      "expected_primary_ids": [
+        "cba-075"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q043",
+      "topic": "seniority_jobs",
+      "question": "What does seniority or continuous service mean under the contract?",
+      "expected_primary_ids": [
+        "cba-065"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q044",
+      "topic": "seniority_jobs",
+      "question": "Does prior service with another public agency count toward seniority?",
+      "expected_primary_ids": [
+        "cba-066"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q045",
+      "topic": "seniority_jobs",
+      "question": "Can I lose seniority if I am absent five days without calling in?",
+      "expected_primary_ids": [
+        "cba-068"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q046",
+      "topic": "seniority_jobs",
+      "question": "Who gets laid off first when positions are cut?",
+      "expected_primary_ids": [
+        "cba-069"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q047",
+      "topic": "seniority_jobs",
+      "question": "How do I request a change in shift, days off, or work location?",
+      "expected_primary_ids": [
+        "cba-071"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q048",
+      "topic": "seniority_jobs",
+      "question": "How long is a permanent vacancy posted for bidding?",
+      "expected_primary_ids": [
+        "cba-071"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q049",
+      "topic": "seniority_jobs",
+      "question": "How does the City choose among qualified bidders for a vacancy?",
+      "expected_primary_ids": [
+        "cba-071"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q050",
+      "topic": "seniority_jobs",
+      "question": "How long is the evaluation period after I win a bid?",
+      "expected_primary_ids": [
+        "cba-071"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q051",
+      "topic": "seniority_jobs",
+      "question": "How long can management detail me to another assignment?",
+      "expected_primary_ids": [
+        "cba-072"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q052",
+      "topic": "seniority_jobs",
+      "question": "If I do a higher-rated job for four days, when do I get higher pay?",
+      "expected_primary_ids": [
+        "cba-073"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q053",
+      "topic": "seniority_jobs",
+      "question": "Can I refuse an assignment outside the bargaining unit?",
+      "expected_primary_ids": [
+        "cba-073"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q054",
+      "topic": "records",
+      "question": "Can I inspect my personnel file?",
+      "expected_primary_ids": [
+        "cba-081"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q055",
+      "topic": "records",
+      "question": "Can I put a rebuttal in my personnel file?",
+      "expected_primary_ids": [
+        "cba-081"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q056",
+      "topic": "records",
+      "question": "How long can old discipline be used against me?",
+      "expected_primary_ids": [
+        "cba-081"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q057",
+      "topic": "records",
+      "question": "Can management make me sign an undated resignation or blank form?",
+      "expected_primary_ids": [
+        "cba-082"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q058",
+      "topic": "records",
+      "question": "What rights do I have to respond to a performance evaluation?",
+      "expected_primary_ids": [
+        "cba-083"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q059",
+      "topic": "leaves_accommodation",
+      "question": "How much bereavement leave do I get?",
+      "expected_primary_ids": [
+        "cba-056"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q060",
+      "topic": "leaves_accommodation",
+      "question": "How long can I take an unpaid medical leave?",
+      "expected_primary_ids": [
+        "cba-059"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q061",
+      "topic": "leaves_accommodation",
+      "question": "Can I take time off for a religious holiday?",
+      "expected_primary_ids": [
+        "cba-060"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q062",
+      "topic": "leaves_accommodation",
+      "question": "If I have an emergency, can I use vacation or compensatory time without advance notice?",
+      "expected_primary_ids": [
+        "cba-061"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q063",
+      "topic": "leaves_accommodation",
+      "question": "What happens when I request a reasonable accommodation?",
+      "expected_primary_ids": [
+        "cba-062"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q064",
+      "topic": "leaves_accommodation",
+      "question": "How much paid parental leave is available?",
+      "expected_primary_ids": [
+        "cba-063"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q065",
+      "topic": "health_safety",
+      "question": "How do I raise a health or safety complaint through the union committee?",
+      "expected_primary_ids": [
+        "cba-021"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q066",
+      "topic": "health_safety",
+      "question": "What does the contract say about providing a safe workplace?",
+      "expected_primary_ids": [
+        "cba-106"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q067",
+      "topic": "health_safety",
+      "question": "Can a health and safety grievance go to arbitration?",
+      "expected_primary_ids": [
+        "cba-107"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q068",
+      "topic": "health_safety",
+      "question": "What equipment should a video display terminal workstation have?",
+      "expected_primary_ids": [
+        "cba-108"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q069",
+      "topic": "other",
+      "question": "When can I get mileage reimbursement for using my own car for work?",
+      "expected_primary_ids": [
+        "cba-045"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q070",
+      "topic": "other",
+      "question": "How much does the City contribute to deferred compensation?",
+      "expected_primary_ids": [
+        "cba-046"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q071",
+      "topic": "other",
+      "question": "Can the union use City bulletin boards and email to communicate with employees?",
+      "expected_primary_ids": [
+        "cba-013"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q072",
+      "topic": "other",
+      "question": "How soon after I am hired should I get a union orientation?",
+      "expected_primary_ids": [
+        "cba-016"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q073",
+      "topic": "other",
+      "question": "How much notice does the union get before the City contracts out bargaining unit work?",
+      "expected_primary_ids": [
+        "cba-117"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q074",
+      "topic": "other",
+      "question": "Does the contract protect me from discrimination because of union activity?",
+      "expected_primary_ids": [
+        "cba-125"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q075",
+      "topic": "other",
+      "question": "How are union dues deductions authorized?",
+      "expected_primary_ids": [
+        "cba-129"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q076",
+      "topic": "source_governance",
+      "question": "The Personnel Rules say probation is six months. I am in AFSCME. How long is my probation?",
+      "expected_primary_ids": [
+        "cba-075"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q077",
+      "topic": "source_governance",
+      "question": "Should I use the City Personnel Rules grievance procedure or the AFSCME contract grievance procedure?",
+      "expected_primary_ids": [
+        "cba-112",
+        "cba-111"
+      ],
+      "must_rank_within": 3
+    },
+    {
+      "id": "Q078",
+      "topic": "source_governance",
+      "question": "If the Personnel Rules and the AFSCME contract conflict, which one controls my represented employment rights?",
+      "expected_primary_ids": [
+        "pr-002"
+      ],
+      "must_rank_within": 3,
+      "note": "The explicit conflict rule appears in the Personnel Rules Goals and Principles: where Personnel Rules conflict with an applicable CBA, the CBA governs."
+    }
+  ]
+}

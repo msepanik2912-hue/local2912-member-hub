@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cba-2022-2027",
+      "document_type": "cba",
+      "title": "Collective Bargaining Agreement between the City of Chicago and AFSCME Council 31",
+      "short_title": "AFSCME–City of Chicago CBA",
+      "effective_start": "2022-07-01",
+      "effective_end": "2027-06-30",
+      "ratified_effective": "2023-04-24",
+      "status": "active",
+      "pdf": "docs/afscme-city-chicago-cba-2022-2027.pdf"
+    },
+    {
+      "id": "personnel-2025-08-01",
+      "document_type": "personnel_rules",
+      "title": "City of Chicago Personnel Rules",
+      "short_title": "City Personnel Rules",
+      "revision_date": "2025-08-01",
+      "status": "active",
+      "pdf": "docs/city-chicago-personnel-rules-2025-08-01.pdf"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "sources": [
+    {
+      "title": "Collective Bargaining Agreement between the City of Chicago and AFSCME Council 31",
+      "short_title": "AFSCME–City of Chicago CBA",
+      "term": "July 1, 2022–June 30, 2027",
+      "ratified_effective": "April 24, 2023",
+      "authority": "primary",
+      "pdf": "docs/afscme-city-chicago-cba-2022-2027.pdf",
+      "page_count": 223,
+      "notes": "Primary source for represented employees. Search results reproduce text extracted from the supplied official PDF; the PDF remains the official visual source."
+    },
+    {
+      "title": "City of Chicago Personnel Rules",
+      "short_title": "City Personnel Rules",
+      "revised": "August 1, 2025",
+      "authority": "supplemental",
+      "pdf": "docs/city-chicago-personnel-rules-2025-08-01.pdf",
+      "page_count": 76,
+      "governance_note": "The Personnel Rules state that where they conflict with an applicable collective bargaining agreement, the CBA governs.",
+      "represented_grievance_note": "Personnel Rule XVI states that an employee covered by a grievance procedure negotiated through collective bargaining is not eligible to file a grievance under Rule XVI.",
+      "notes": "Supplemental City source. For Local 2912 represented employees, contract language must be checked first."
+    }
+  ],
+  "precedence": [
+    "AFSCME–City of Chicago CBA (primary for represented employees)",
+    "City of Chicago Personnel Rules (supplemental; CBA governs conflicts)"
+  ],
+  "release_rule": "Do not publish AI-generated conclusions as authoritative. Contract search is source retrieval; Ask 2912 remains a later grounded-answer layer with steward referral."
+}
